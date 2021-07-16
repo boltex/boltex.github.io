@@ -23,8 +23,65 @@ p {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-div.leointeg {
+.leo-img {
+  transition: 0.5s;
+
+  opacity: 0;
+  position: absolute;
+  top: -0.4rem;
+  left: 3rem;
+}
+
+.leointeg:hover .leo-img {
+  opacity: 1;
+}
+
+.support {
+  margin: 0.5rem 1rem 0rem 2rem;
+  display: inline-block;
+  background-color: #d65e9a;
+  border-radius: 0.2rem;
+  border: 2px solid #b84c75;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.2rem 1rem;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: 0.3s;
+}
+.support:hover {
+  background-color: #c22c77;
+}
+.vsix {
+  margin: 0.5rem 1rem 0rem 2rem;
+  display: inline-block;
+  background-color: #cc5d1a;
+  border: 2px solid #dda86c;
+  border-radius: 0.2rem;
+  color: #f2f2f2;
+  font-size: 1rem;
+  padding: 0.2rem 1rem;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: 0.3s;
+}
+.vsix:hover {
+  background-color: #a34b15;
+}
+.vsix a,
+.support a {
+  color: #fff;
+  text-decoration-color: transparent;
+}
+
+.leointeg {
+  position: relative;
   margin-top: 2rem;
+}
+.download-label {
+  margin: 0.5rem -2rem 0rem 2rem;
+  display: inline-block;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .leointeg h1 {
@@ -47,7 +104,6 @@ div.leointeg {
   padding-top: 0.25rem;
   padding-right: 4rem;
   padding-bottom: 0.4rem;
-
   background-color: #00000030;
   color: white;
   text-shadow: 0.05em 0.05em #1f1b1bb0;
