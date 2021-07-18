@@ -162,4 +162,12 @@ p {
   min-height: 0.5rem;
   background: linear-gradient(90deg, #aa7336 0%, #d89c39 100%);
 }
+@media only screen and (max-width: 400px) {
+  .leointeg h1 {
+    padding-left: 0rem;
+  }
+  .leointeg h2 {
+    padding-right: 1rem;
+  }
+}
 /*@-leo*/
