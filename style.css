@@ -160,11 +160,14 @@ p {
   background: linear-gradient(90deg, #aa7336 0%, #d89c39 100%);
 }
 @media only screen and (max-width: 400px) {
+  h1 {
+    margin-top: 2rem
+  }
   p.last {
-    margin-bottom: 0;
+    margin-bottom: 1rem;
   }
   .leointeg{
-    margin-top: 0;
+    margin-top: 0.25rem;
   }
   .leointeg h1 {
     margin-top: 0rem;
