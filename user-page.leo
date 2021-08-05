@@ -253,8 +253,8 @@ p {
 		Download the extension:
 	&lt;/div&gt; --&gt;
 	&lt;div class="vsix"&gt;
-		&lt;a href="/leointeg-0.1.16.vsix"
-		   download&gt;📁 Download LeoInteg beta 0.1.16&lt;/a&gt;
+		&lt;a href="/leointeg-0.1.17.vsix"
+		   download&gt;📁 Download LeoInteg beta 0.1.17&lt;/a&gt;
 	&lt;/div&gt;
 	&lt;div class="support"&gt;
 		&lt;a href="https://www.patreon.com/felixgraphx"&gt;🤍 Sponsor via Patreon&lt;/a&gt;
