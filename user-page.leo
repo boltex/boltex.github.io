@@ -11,6 +11,7 @@
 <v t="fil.20210718013948.1"><vh>body</vh></v>
 </v>
 <v t="felix.20210717232712.1"><vh>@clean style.css</vh></v>
+<v t="felix.20210806163945.1"><vh>new node</vh></v>
 </vnodes>
 <tnodes>
 <t tx="felix.20210717232432.2">@language html
@@ -203,6 +204,8 @@ p {
   }
 }
 </t>
+<t tx="felix.20210806163945.1">test
+123</t>
 <t tx="fil.20210718013926.1">&lt;head&gt;
 	&lt;meta charset="UTF-8"&gt;
 	&lt;meta http-equiv="X-UA-Compatible"
