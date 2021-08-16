@@ -185,12 +185,12 @@ p {
 }
 @media only screen and (max-width: 400px) {
   h1 {
-    margin-top: 2rem
+    margin-top: 2rem;
   }
   p.last {
     margin-bottom: 1rem;
   }
-  .leointeg{
+  .leointeg {
     margin-top: 0.25rem;
   }
   .leointeg h1 {
