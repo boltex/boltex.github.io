@@ -70,6 +70,24 @@ p {
   opacity: 1;
 }
 
+.github {
+  margin: 0.5rem 0.5rem 0rem 2rem;
+  background-color: #754721;
+  border-radius: 0.2rem;
+  display: inline-block;
+
+  border: 2px solid #9e752a;
+  color: #ffffff;
+  font-size: 1rem;
+  padding: 0.2rem 1rem;
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  transition: 0.3s;
+}
+.github:hover {
+  background-color: #c78100;
+}
+
 .donate {
   margin: 0.5rem 0.5rem 0rem 2rem;
   background-color: #494e50;
@@ -84,11 +102,6 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: 0.3s;
 }
-
-.donate form {
-  display: inline;
-}
-
 .donate:hover {
   background-color: #485b79;
 }
@@ -136,18 +149,17 @@ p {
 }
 .vsix a,
 .support a,
+.github a,
 .donate a {
   color: #fff;
   text-decoration-color: transparent;
-}
-.donate span {
-  color: #fff;
 }
 
 .leointeg {
   position: relative;
   margin-top: 1rem;
 }
+
 .download-label {
   margin: 0.5rem -2rem 0rem 2rem;
   display: inline-block;
@@ -255,6 +267,9 @@ p {
 	&lt;div class="vsix"&gt;
 		&lt;a href="/leointeg-0.1.17.vsix"
 		   download&gt;📁 Download LeoInteg beta 0.1.17&lt;/a&gt;
+	&lt;/div&gt;
+	&lt;div class="github"&gt;
+		&lt;a href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
 	&lt;/div&gt;
 	&lt;div class="support"&gt;
 		&lt;a href="https://www.patreon.com/felixgraphx"&gt;🤍 Sponsor via Patreon&lt;/a&gt;
