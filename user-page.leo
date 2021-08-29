@@ -71,15 +71,15 @@ p {
 }
 
 .github {
-  margin: 0.5rem 0.5rem 0rem 2rem;
-  background-color: #754721;
+  margin: 0.5rem 0rem 0rem 1.5rem;
+  background-color: #6b4234;
   border-radius: 0.2rem;
   display: inline-block;
 
-  border: 2px solid #9e752a;
+  border: 2px solid #8d6f38;
   color: #ffffff;
   font-size: 1rem;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 1rem 0.2rem 0.75rem;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: 0.3s;
@@ -89,7 +89,7 @@ p {
 }
 
 .donate {
-  margin: 0.5rem 0.5rem 0rem 2rem;
+  margin: 0.5rem 0rem 0rem 1.5rem;
   background-color: #494e50;
   border-radius: 0.2rem;
   display: inline-block;
@@ -97,7 +97,7 @@ p {
   border: 2px solid #798283;
   color: #ffffff;
   font-size: 1rem;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 1rem 0.2rem 0.75rem;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: 0.3s;
@@ -115,7 +115,7 @@ p {
   float: right;
 }
 .support {
-  margin: 0.5rem 0.5rem 0rem 2rem;
+  margin: 0.5rem 0rem 0rem 1.5rem;
   display: inline-block;
 
   background-color: #7c546d;
@@ -123,7 +123,7 @@ p {
   border: 2px solid #b1899a;
   color: #ffffff;
   font-size: 1rem;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 1rem 0.2rem 0.75rem;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: 0.3s;
@@ -132,14 +132,14 @@ p {
   background-color: #943c68;
 }
 .vsix {
-  margin: 0.5rem 0.5rem 0rem 2rem;
+  margin: 0.5rem 0rem 0rem 1.5rem;
   display: inline-block;
   background-color: #cc5d1a;
   border: 2px solid #dda86c;
   border-radius: 0.2rem;
   color: #f2f2f2;
   font-size: 1rem;
-  padding: 0.2rem 1rem;
+  padding: 0.2rem 1rem 0.2rem 0.75rem;
   text-align: center;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: 0.3s;
