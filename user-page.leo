@@ -71,7 +71,7 @@ p {
 }
 
 .github {
-  margin: 0.5rem 0rem 0rem 1.5rem;
+  margin: 0.5rem 0 0 1.5rem;
   background-color: #6b4234;
   border-radius: 0.2rem;
   display: inline-block;
@@ -89,7 +89,7 @@ p {
 }
 
 .donate {
-  margin: 0.5rem 0rem 0rem 1.5rem;
+  margin: 0.5rem 0 0 1.5rem;
   background-color: #494e50;
   border-radius: 0.2rem;
   display: inline-block;
@@ -115,7 +115,7 @@ p {
   float: right;
 }
 .support {
-  margin: 0.5rem 0rem 0rem 1.5rem;
+  margin: 0.5rem 0 0 1.5rem;
   display: inline-block;
 
   background-color: #7c546d;
@@ -132,7 +132,7 @@ p {
   background-color: #943c68;
 }
 .vsix {
-  margin: 0.5rem 0rem 0rem 1.5rem;
+  margin: 0.5rem 0 0 1.5rem;
   display: inline-block;
   background-color: #cc5d1a;
   border: 2px solid #dda86c;
@@ -161,7 +161,7 @@ p {
 }
 
 .download-label {
-  margin: 0.5rem -2rem 0rem 2rem;
+  margin: 0.5rem -2rem 0 2rem;
   display: inline-block;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -206,7 +206,7 @@ p {
     margin-top: 0.25rem;
   }
   .leointeg h1 {
-    margin-top: 0rem;
+    margin-top: 0;
     padding-left: 2.8rem;
     margin-right: 1rem;
   }
@@ -265,8 +265,8 @@ p {
 		Download the extension:
 	&lt;/div&gt; --&gt;
 	&lt;div class="vsix"&gt;
-		&lt;a href="/leointeg-0.1.17.vsix"
-		   download&gt;📁 Download LeoInteg beta 0.1.17&lt;/a&gt;
+		&lt;a href="/leointeg-0.1.18.vsix"
+		   download&gt;📁 Download LeoInteg beta 0.1.18&lt;/a&gt;
 	&lt;/div&gt;
 	&lt;div class="github"&gt;
 		&lt;a href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
