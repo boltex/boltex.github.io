@@ -225,7 +225,7 @@ p {
 	&lt;link rel="shortcut icon"
 		  href="/favicon.ico"&gt;
 	&lt;link rel="apple-touch-icon"
-		  sizes="180x180"
+		  sizes="190x190"
 		  href="/apple-touch-icon.png"&gt;
 	&lt;link rel="icon"
 		  type="image/png"
@@ -265,8 +265,8 @@ p {
 		Download the extension:
 	&lt;/div&gt; --&gt;
 	&lt;div class="vsix"&gt;
-		&lt;a href="/leointeg-0.1.18.vsix"
-		   download&gt;📁 Download LeoInteg beta 0.1.18&lt;/a&gt;
+		&lt;a href="/leointeg-0.1.19.vsix"
+		   download&gt;📁 Download LeoInteg beta 0.1.19&lt;/a&gt;
 	&lt;/div&gt;
 	&lt;div class="github"&gt;
 		&lt;a href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
