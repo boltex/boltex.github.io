@@ -222,6 +222,16 @@ p {
 	&lt;meta name="viewport"
 		  content="width=device-width, initial-scale=1.0"&gt;
 	&lt;title&gt;Boltex - Home&lt;/title&gt;
+	&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
+	&lt;script async
+			src="https://www.googletagmanager.com/gtag/js?id=G-6YLK1QW8SS"&gt;&lt;/script&gt;
+	&lt;script&gt;
+		window.dataLayer = window.dataLayer || [];
+		function gtag() { dataLayer.push(arguments); }
+		gtag('js', new Date());
+
+		gtag('config', 'G-6YLK1QW8SS');
+	&lt;/script&gt;
 	&lt;link rel="shortcut icon"
 		  href="/favicon.ico"&gt;
 	&lt;link rel="apple-touch-icon"
