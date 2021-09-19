@@ -46,6 +46,9 @@ a:hover {
   color: #656;
   text-decoration: none;
 }
+p.last a{
+  font-weight: bold;
+}
 
 h1 {
   margin: 3rem 2rem 1rem 4rem;
@@ -56,6 +59,16 @@ p {
   margin: 1rem 4rem;
   font-size: 1rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
 }
 
 .leo-img {
@@ -254,37 +267,35 @@ p {
 </t>
 <t tx="fil.20210718013948.1">&lt;body&gt;
 	&lt;h1&gt;Hello World&lt;/h1&gt;
+
 	&lt;p&gt;I'm Félix, a programmer, musician, and graphic designer based in Montréal.&lt;/p&gt;
+
 	&lt;p class="last"&gt; I'm the creator of
-		&lt;a href="https://github.com/boltex/leointeg#-leo-for-vs-code"&gt;leointeg&lt;/a&gt;,
+		&lt;a href="https://github.com/boltex/leointeg#-leo-for-vs-code"&gt;LeoInteg&lt;/a&gt;,
 		the &lt;a href="https://leoeditor.com/"&gt;Leo-Editor&lt;/a&gt; integration extension for
 		&lt;a href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt;.
 	&lt;/p&gt;
 
-	&lt;div class="leointeg"&gt;
+	&lt;div class="leointeg noselect"&gt;
 		&lt;img class="leo-img"
 			 src="/leoapp128px.png"
 			 alt="Leo-Editor"&gt;
 		&lt;h1&gt;Leo Editor&lt;/h1&gt;
 		&lt;h2&gt;Integration Extension&lt;/h2&gt;
-		&lt;div class="bottom-border"&gt;
-
-		&lt;/div&gt;
+		&lt;div class="bottom-border"&gt; &lt;/div&gt;
 	&lt;/div&gt;
-	&lt;!-- &lt;div class="download-label"&gt;
-		Download the extension:
-	&lt;/div&gt; --&gt;
-	&lt;div class="vsix"&gt;
+
+	&lt;div class="vsix noselect"&gt;
 		&lt;a href="/leointeg-0.1.20.vsix"
 		   download&gt;📁 Download LeoInteg beta 0.1.20&lt;/a&gt;
 	&lt;/div&gt;
-	&lt;div class="github"&gt;
+	&lt;div class="github noselect"&gt;
 		&lt;a href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
 	&lt;/div&gt;
-	&lt;div class="support"&gt;
+	&lt;div class="support noselect"&gt;
 		&lt;a href="https://www.patreon.com/felixgraphx"&gt;🤍 Sponsor via Patreon&lt;/a&gt;
 	&lt;/div&gt;
-	&lt;div class="donate"&gt;
+	&lt;div class="donate noselect"&gt;
 		&lt;a href="https://www.paypal.com/donate?hosted_button_id=3JWX5TH5FL9TL"&gt;🤍 Donate via Paypal&lt;/a&gt;
 	&lt;/div&gt;
 	&lt;div class="buffer"&gt;&amp;nbsp;&lt;/div&gt;
