@@ -275,8 +275,8 @@ p {
 		Download the extension:
 	&lt;/div&gt; --&gt;
 	&lt;div class="vsix"&gt;
-		&lt;a href="/leointeg-0.1.19.vsix"
-		   download&gt;📁 Download LeoInteg beta 0.1.19&lt;/a&gt;
+		&lt;a href="/leointeg-0.1.20.vsix"
+		   download&gt;📁 Download LeoInteg beta 0.1.20&lt;/a&gt;
 	&lt;/div&gt;
 	&lt;div class="github"&gt;
 		&lt;a href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
