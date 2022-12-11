@@ -232,6 +232,10 @@ p {
 	&lt;meta charset="UTF-8"&gt;
 	&lt;meta http-equiv="X-UA-Compatible"
 		  content="IE=edge"&gt;
+	&lt;meta http-equiv="Cache-control"
+		  content="no-cache, no-store, must-revalidate"&gt;
+	&lt;meta http-equiv="Pragma"
+	      content="no-cache"&gt;
 	&lt;meta name="viewport"
 		  content="width=device-width, initial-scale=1.0"&gt;
 	&lt;title&gt;Boltex - Home&lt;/title&gt;
