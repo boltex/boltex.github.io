@@ -230,18 +230,13 @@ p {
 </t>
 <t tx="fil.20210718013926.1">&lt;head&gt;
 	&lt;meta charset="UTF-8"&gt;
-	&lt;meta http-equiv="X-UA-Compatible"
-		  content="IE=edge"&gt;
-	&lt;meta http-equiv="Cache-control"
-		  content="no-cache, no-store, must-revalidate"&gt;
-	&lt;meta http-equiv="Pragma"
-	      content="no-cache"&gt;
-	&lt;meta name="viewport"
-		  content="width=device-width, initial-scale=1.0"&gt;
+	&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+	&lt;meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate"&gt;
+	&lt;meta http-equiv="Pragma" content="no-cache"&gt;
+	&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
 	&lt;title&gt;Boltex - Home&lt;/title&gt;
 	&lt;!-- Global site tag (gtag.js) - Google Analytics --&gt;
-	&lt;script async
-			src="https://www.googletagmanager.com/gtag/js?id=G-6YLK1QW8SS"&gt;&lt;/script&gt;
+	&lt;script async src="https://www.googletagmanager.com/gtag/js?id=G-6YLK1QW8SS"&gt;&lt;/script&gt;
 	&lt;script&gt;
 		window.dataLayer = window.dataLayer || [];
 		function gtag() { dataLayer.push(arguments); }
@@ -249,23 +244,12 @@ p {
 
 		gtag('config', 'G-6YLK1QW8SS');
 	&lt;/script&gt;
-	&lt;link rel="shortcut icon"
-		  href="/favicon.ico"&gt;
-	&lt;link rel="apple-touch-icon"
-		  sizes="190x190"
-		  href="/apple-touch-icon.png"&gt;
-	&lt;link rel="icon"
-		  type="image/png"
-		  sizes="32x32"
-		  href="/favicon-32x32.png"&gt;
-	&lt;link rel="icon"
-		  type="image/png"
-		  sizes="16x16"
-		  href="/favicon-16x16.png"&gt;
-	&lt;link rel="manifest"
-		  href="/site.webmanifest"&gt;
-	&lt;link rel="stylesheet"
-		  href="style.css"&gt;
+	&lt;link rel="shortcut icon" href="/favicon.ico"&gt;
+	&lt;link rel="apple-touch-icon" sizes="190x190" href="/apple-touch-icon.png"&gt;
+	&lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"&gt;
+	&lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"&gt;
+	&lt;link rel="manifest" href="/site.webmanifest"&gt;
+	&lt;link rel="stylesheet" href="style.css"&gt;
 &lt;/head&gt;
 
 </t>
@@ -282,16 +266,14 @@ p {
 
 	&lt;div class="controls"&gt;
 		&lt;div class="leointeg noselect"&gt;
-			&lt;img class="leo-img"
-				 src="/leoapp128px.png"
-				 alt="Leo-Editor"&gt;
+			&lt;img class="leo-img" src="/leoapp128px.png" alt="Leo-Editor"&gt;
 			&lt;h1&gt;Leo Editor&lt;/h1&gt;
 			&lt;h2&gt;Integration Extension&lt;/h2&gt;
 			&lt;div class="bottom-border"&gt; &lt;/div&gt;
 		&lt;/div&gt;
 
 		&lt;div class="vsix noselect"&gt;
-			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.11&lt;/a&gt;
+			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.12&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class="github noselect"&gt;
 			&lt;a href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
