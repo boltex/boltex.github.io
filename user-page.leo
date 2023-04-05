@@ -31,22 +31,27 @@ html {
   background-attachment: fixed;
   background-size: contain;
 }
+
 body {
   margin: 0;
   padding: 0;
 }
+
 .clear-both {
   clear: both;
 }
+
 a {
   color: rgb(65, 47, 65);
   text-decoration-color: #baa8a8;
 }
+
 a:hover {
   color: #656;
   text-decoration: none;
 }
-p.last a {
+
+p.bold-anchor a {
   font-weight: bold;
 }
 
@@ -55,6 +60,7 @@ h1 {
   font-size: 3rem;
   font-family: "Courier New", Courier, monospace;
 }
+
 p {
   margin: 1rem 4rem;
   font-size: 1rem;
@@ -62,13 +68,21 @@ p {
 }
 
 .noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
+  /* iOS Safari */
+  -webkit-touch-callout: none;
+  /* Safari */
+  -webkit-user-select: none;
+  /* Konqueror HTML */
+  -khtml-user-select: none;
+  /* Old versions of Firefox */
+  -moz-user-select: none;
+  /* Internet Explorer/Edge */
+  -ms-user-select: none;
+  /* 
+  Non-prefixed version, currently
+  supported by Chrome, Edge, Opera and Firefox 
+  */
+  user-select: none;
 }
 
 .leo-img {
@@ -97,6 +111,7 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: 0.3s;
 }
+
 .github:hover {
   background-color: #c78100;
 }
@@ -115,9 +130,11 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: 0.3s;
 }
+
 .donate:hover {
   background-color: #485b79;
 }
+
 .buffer {
   clear: both;
   margin: 0;
@@ -127,6 +144,7 @@ p {
 
   float: right;
 }
+
 .support {
   margin: 0.5rem 0 0 1.5rem;
   display: inline-block;
@@ -141,9 +159,11 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: 0.3s;
 }
+
 .support:hover {
   background-color: #943c68;
 }
+
 .vsix {
   margin: 0.5rem 0 0 1.5rem;
   display: inline-block;
@@ -157,9 +177,11 @@ p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   transition: 0.3s;
 }
+
 .vsix:hover {
   background-color: #a34b15;
 }
+
 .vsix a,
 .support a,
 .github a,
@@ -191,6 +213,7 @@ p {
   margin-bottom: 0;
   font-weight: normal;
 }
+
 .leointeg h2 {
   font-size: 1.75rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -204,25 +227,31 @@ p {
   color: white;
   text-shadow: 0.05em 0.05em #1f1b1bb0;
 }
+
 .leointeg .bottom-border {
   min-height: 0.5rem;
   background: linear-gradient(90deg, #aa7336 0%, #d89c39 100%);
 }
+
 @media only screen and (max-width: 400px) {
   h1 {
     margin-top: 2rem;
   }
+
   p.last {
     margin-bottom: 1rem;
   }
+
   .leointeg {
     margin-top: 0.25rem;
   }
+
   .leointeg h1 {
     margin-top: 0;
     padding-left: 2.8rem;
     margin-right: 1rem;
   }
+
   .leointeg h2 {
     padding-right: 1rem;
   }
@@ -258,11 +287,16 @@ p {
 
 	&lt;p&gt;I'm Félix, a programmer, musician, and graphic designer based in Montréal.&lt;/p&gt;
 
-	&lt;p class="last"&gt; I'm the creator of
+	&lt;p class="last bold-anchor"&gt; I'm the creator of
 		&lt;a href="https://github.com/boltex/leointeg#-leo-for-vs-code"&gt;LeoInteg&lt;/a&gt;,
 		the &lt;a href="https://leoeditor.com/"&gt;Leo-Editor&lt;/a&gt; integration extension for
 		&lt;a href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt;.
 	&lt;/p&gt;
+
+	&lt;!-- &lt;p class="last bold-anchor"&gt; I'm also the creator of
+		&lt;a href="https://github.com/boltex/leojs#leojs"&gt;LeoJS&lt;/a&gt;,
+		the javascript implementation of Leo. &lt;i&gt;Still in development&lt;/i&gt;
+	&lt;/p&gt; --&gt;
 
 	&lt;div class="controls"&gt;
 		&lt;div class="leointeg noselect"&gt;
@@ -273,7 +307,7 @@ p {
 		&lt;/div&gt;
 
 		&lt;div class="vsix noselect"&gt;
-			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.12&lt;/a&gt;
+			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.13&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class="github noselect"&gt;
 			&lt;a href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
