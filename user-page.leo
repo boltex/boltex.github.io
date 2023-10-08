@@ -307,7 +307,7 @@ p {
 		&lt;/div&gt;
 
 		&lt;div class="vsix noselect"&gt;
-			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.15&lt;/a&gt;
+			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.16&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class="github noselect"&gt;
 			&lt;a href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
