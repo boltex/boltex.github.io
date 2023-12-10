@@ -158,6 +158,16 @@ p {
   background-color: #a34b15;
 }
 
+.leojs {
+  background-color: #f08c05;
+  border-color: #9e7425;
+}
+
+.vsix.leojs:hover {
+  background-color: #ffa754;
+}
+
+
 .vsix a,
 .support a,
 .github a,
