@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Created by Leo: https://leo-editor.github.io/leo-editor/leo_toc.html -->
-<leo_file xmlns:leo="http://leo-editor.github.io/leo-editor/namespaces/leo-python-editor/1.1" >
+<leo_file xmlns:leo="https://leo-editor.github.io/leo-editor/namespaces/leo-python-editor/1.1" >
 <leo_header file_format="2"/>
 <globals/>
 <preferences/>
@@ -182,6 +182,16 @@ p {
   background-color: #a34b15;
 }
 
+.leojs {
+  background-color: #f08c05;
+  border-color: #9e7425;
+}
+
+.vsix.leojs:hover {
+  background-color: #ffa754;
+}
+
+
 .vsix a,
 .support a,
 .github a,
@@ -287,9 +297,13 @@ p {
 
 	&lt;p&gt;I'm Félix, a programmer, musician, and graphic designer based in Montréal.&lt;/p&gt;
 
-	&lt;p class="last bold-anchor"&gt; I'm the creator of
-		&lt;a href="https://github.com/boltex/leointeg#-leo-for-vs-code"&gt;LeoInteg&lt;/a&gt;,
-		the &lt;a href="https://leoeditor.com/"&gt;Leo-Editor&lt;/a&gt; integration extension for
+	&lt;p class="last bold-anchor"&gt; I'm the creator of the
+		&lt;a href="https://github.com/boltex/leojs#-literate-editor-with-outline"&gt;LeoJS&lt;/a&gt;
+		and
+		&lt;a href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"&gt;LeoInteg&lt;/a&gt;,
+		the
+		&lt;a href="https://leoeditor.com/"&gt;Leo-Editor&lt;/a&gt;
+		extensions for
 		&lt;a href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt;.
 	&lt;/p&gt;
 
@@ -305,9 +319,13 @@ p {
 			&lt;h2&gt;Integration Extension&lt;/h2&gt;
 			&lt;div class="bottom-border"&gt; &lt;/div&gt;
 		&lt;/div&gt;
-
+		&lt;!-- 
+		&lt;div class="vsix leojs noselect"&gt;
+			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leojs"&gt;🦁 LeoJS 0.2.0&lt;/a&gt;
+		&lt;/div&gt;
+		 --&gt;
 		&lt;div class="vsix noselect"&gt;
-			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.15&lt;/a&gt;
+			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.17&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class="github noselect"&gt;
 			&lt;a href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
