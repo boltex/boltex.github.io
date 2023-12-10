@@ -319,11 +319,9 @@ p {
 			&lt;h2&gt;Integration Extension&lt;/h2&gt;
 			&lt;div class="bottom-border"&gt; &lt;/div&gt;
 		&lt;/div&gt;
-		&lt;!-- 
 		&lt;div class="vsix leojs noselect"&gt;
 			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leojs"&gt;🦁 LeoJS 0.2.0&lt;/a&gt;
 		&lt;/div&gt;
-		 --&gt;
 		&lt;div class="vsix noselect"&gt;
 			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.17&lt;/a&gt;
 		&lt;/div&gt;
