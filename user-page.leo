@@ -306,12 +306,7 @@ p {
 		extensions for
 		&lt;a href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt;.
 	&lt;/p&gt;
-
-	&lt;!-- &lt;p class="last bold-anchor"&gt; I'm also the creator of
-		&lt;a href="https://github.com/boltex/leojs#leojs"&gt;LeoJS&lt;/a&gt;,
-		the javascript implementation of Leo. &lt;i&gt;Still in development&lt;/i&gt;
-	&lt;/p&gt; --&gt;
-
+	
 	&lt;div class="controls"&gt;
 		&lt;div class="leointeg noselect"&gt;
 			&lt;img class="leo-img" src="/leoapp128px.png" alt="Leo-Editor"&gt;
@@ -320,10 +315,10 @@ p {
 			&lt;div class="bottom-border"&gt; &lt;/div&gt;
 		&lt;/div&gt;
 		&lt;div class="vsix leojs noselect"&gt;
-			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leojs"&gt;🦁 LeoJS 0.2.3&lt;/a&gt;
+			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leojs"&gt;🦁 LeoJS 0.2.4&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class="vsix noselect"&gt;
-			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.17&lt;/a&gt;
+			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.18&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class="github noselect"&gt;
 			&lt;a href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
