@@ -297,7 +297,7 @@ p {
 
 	&lt;p&gt;I'm Félix, a programmer, musician, and graphic designer based in Montréal.&lt;/p&gt;
 
-	&lt;p class="last bold-anchor"&gt; I'm the creator of the
+	&lt;p class="last bold-anchor"&gt;I'm the creator of the
 		&lt;a href="https://github.com/boltex/leojs#-literate-editor-with-outline"&gt;LeoJS&lt;/a&gt;
 		and
 		&lt;a href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"&gt;LeoInteg&lt;/a&gt;,
@@ -315,7 +315,7 @@ p {
 			&lt;div class="bottom-border"&gt; &lt;/div&gt;
 		&lt;/div&gt;
 		&lt;div class="vsix leojs noselect"&gt;
-			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leojs"&gt;🦁 LeoJS 0.2.11&lt;/a&gt;
+			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leojs"&gt;🦁 LeoJS 0.2.12&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class="vsix noselect"&gt;
 			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.19&lt;/a&gt;
