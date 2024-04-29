@@ -316,7 +316,7 @@ p {
 			&lt;div class="bottom-border"&gt; &lt;/div&gt;
 		&lt;/div&gt;
 		&lt;div class="vsix leojs noselect"&gt;
-			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leojs"&gt;🦁 LeoJS 0.2.12&lt;/a&gt;
+			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leojs"&gt;🦁 LeoJS 0.2.13&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class="vsix noselect"&gt;
 			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.19&lt;/a&gt;
