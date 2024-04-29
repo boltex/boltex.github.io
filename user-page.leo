@@ -306,6 +306,7 @@ p {
 		extensions for
 		&lt;a href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt;.
 	&lt;/p&gt;
+	&lt;p&gt;LeoInteg integrates Leo into VSCode (Scriptable in Python), while LeoJS is a javascript implementation of Leo as a VSCode extension (Scriptable in JavaScript and TypeScript)&lt;/p&gt;
 
 	&lt;div class="controls"&gt;
 		&lt;div class="leointeg noselect"&gt;
@@ -315,7 +316,7 @@ p {
 			&lt;div class="bottom-border"&gt; &lt;/div&gt;
 		&lt;/div&gt;
 		&lt;div class="vsix leojs noselect"&gt;
-			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leojs"&gt;🦁 LeoJS 0.2.12&lt;/a&gt;
+			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leojs"&gt;🦁 LeoJS 0.2.13&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class="vsix noselect"&gt;
 			&lt;a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg"&gt;🦁 LeoInteg 1.0.19&lt;/a&gt;
