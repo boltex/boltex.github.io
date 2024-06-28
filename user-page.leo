@@ -328,7 +328,7 @@ p {
 			&lt;a href="https://www.patreon.com/felixgraphx"&gt;🤍 Sponsor via Patreon&lt;/a&gt;
 		&lt;/div&gt;
 		&lt;div class="donate noselect"&gt;
-			&lt;a href="https://www.paypal.com/donate?hosted_button_id=3JWX5TH5FL9TL"&gt;🤍 Donate via Paypal&lt;/a&gt;
+			&lt;a href="https://www.paypal.com/donate/?hosted_button_id=3JWX5TH5FL9TL"&gt;🤍 Donate via Paypal&lt;/a&gt;
 		&lt;/div&gt;
 	&lt;/div&gt;
 	&lt;div class="buffer"&gt;&amp;nbsp;&lt;/div&gt;
