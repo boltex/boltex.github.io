@@ -306,7 +306,7 @@ p {
 		extensions for
 		&lt;a href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt;.
 	&lt;/p&gt;
-	&lt;p&gt;LeoInteg integrates Leo into VSCode (Scriptable in Python), while LeoJS is a javascript implementation of Leo as a VSCode extension (Scriptable in JavaScript and TypeScript)&lt;/p&gt;
+	&lt;p&gt;LeoInteg integrates Leo into VSCode, while LeoJS is itself a javascript translation of the Leo-Editor, implemented as a VSCode extension (Scriptable in JavaScript and TypeScript).&lt;/p&gt;
 
 	&lt;div class="controls"&gt;
 		&lt;div class="leointeg noselect"&gt;
