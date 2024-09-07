@@ -2,69 +2,96 @@
 <html lang="en">
 
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
-	<meta http-equiv="Pragma" content="no-cache">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Boltex - Home</title>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-6YLK1QW8SS"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boltex - Home</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6YLK1QW8SS"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-		gtag('config', 'G-6YLK1QW8SS');
-	</script>
-	<link rel="shortcut icon" href="/favicon.ico">
-	<link rel="apple-touch-icon" sizes="190x190" href="/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/site.webmanifest">
-	<link rel="stylesheet" href="style.css">
+    gtag('config', 'G-6YLK1QW8SS');
+  </script>
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="190x190" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-	<h1>Hello World</h1>
 
-	<p>I'm Félix, a programmer, musician, and graphic designer based in Montréal.</p>
+  <div class="top-row">
 
-	<p class="last bold-anchor">I'm the creator of the
-		<a href="https://github.com/boltex/leojs#-literate-editor-with-outline">LeoJS</a>
-		and
-		<a href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code">LeoInteg</a>,
-		the
-		<a href="https://leoeditor.com/">Leo-Editor</a>
-		extensions for
-		<a href="https://code.visualstudio.com/">VSCode</a>.
-	</p>
-	<p>LeoInteg integrates Leo into VSCode, while LeoJS is itself a javascript translation of the Leo-Editor, implemented as a VSCode extension (Scriptable in JavaScript and TypeScript).</p>
+    <a class="column-link column-leojs" href="https://boltex.github.io/leojs/" target="_blank">
+      <h2><img class="leo-32" src="/leojs32px.png" alt="LeoJS"> Leo<span class="js-logo">JS</span> <span
+          class="subtitle">VSCode&nbsp;Extension</span></h2>
+      <p>A <strong>TypeScript implementation of the Leo&nbsp;Editor</strong>, scriptable in
+        JavaScript and TypeScript. LeoJS can also be used in a browser with VSCode for the web.</p>
+      <p class="more-info">Find out more about LeoJS...</p>
+    </a>
 
-	<div class="controls">
-		<div class="leointeg noselect">
-			<img class="leo-img" src="/leoapp128px.png" alt="Leo-Editor">
-			<h1>Leo Editor</h1>
-			<h2>Integration Extension</h2>
-			<div class="bottom-border"> </div>
-		</div>
-		<div class="vsix leojs noselect">
-			<a href="https://marketplace.visualstudio.com/items?itemName=boltex.leojs">🦁 LeoJS 1.0.5</a>
-		</div>
-		<div class="vsix noselect">
-			<a href="https://marketplace.visualstudio.com/items?itemName=boltex.leointeg">🦁 LeoInteg 1.0.23</a>
-		</div>
-		<div class="github noselect">
-			<a href="https://github.com/sponsors/boltex">🤍 Sponsor on GitHub</a>
-		</div>
-		<div class="support noselect">
-			<a href="https://www.patreon.com/felixgraphx">🤍 Sponsor via Patreon</a>
-		</div>
-		<div class="donate noselect">
-			<a href="https://www.paypal.com/donate/?hosted_button_id=3JWX5TH5FL9TL">🤍 Donate via Paypal</a>
-		</div>
-	</div>
-	<div class="buffer">&nbsp;</div>
+    <a class="column-link column-leointeg" href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"
+      target="_blank">
+      <h2><img class="leo-32" src="/leointeg32px.png" alt="LeoJS"> Leo<span class="integ-logo">Integ</span> <span
+          class="subtitle">VSCode&nbsp;Extension</span></h2>
+      <p>The <strong>original Python Leo&nbsp;Editor integrated into VSCode</strong>. All features are mapped to UI
+        controls, and their original keyboard shortcuts.</p>
+      <p class="more-info">Find out more about LeoInteg...</p>
+    </a>
+  </div>
+
+  <h1>Hello World</h1>
+
+  <p>I'm Félix, a programmer, musician, and graphic designer based in Montréal.</p>
+
+  <p class="last bold-anchor">I'm the creator of the
+    <a target="_blank" href="https://boltex.github.io/leojs/">LeoJS</a>
+    and
+    <a target="_blank" href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code">LeoInteg</a>,
+    the
+    <a target="_blank" href="https://leo-editor.github.io/leo-editor/">Leo&nbsp;Editor</a>
+    extensions for
+    <a target="_blank" href="https://code.visualstudio.com/">VSCode</a>
+    and
+    <a target="_blank" href="https://vscodium.com//">VSCodium</a>
+  </p>
+
+  <p class="video-links">
+    <a href="https://www.youtube.com/watch?v=your-video-id" target="_blank" rel="noopener noreferrer"><img class="video"
+        src="video-button-intro.png" alt="Watch the introduction demo"></a>
+    <a href="https://www.youtube.com/watch?v=your-video-id" target="_blank" rel="noopener noreferrer"><img class="video"
+        src="video-button-demo.png" alt="Watch the video demo"></a>
+  </p>
+
+  <p>To sponsor the development of these open-source projects, please use the 🤍 buttons below to contribute.
+  </p>
+  <p>Feel free to reach out anytime at <a href="mailto:felixgraphx@gmail.com">felixgraphx@gmail.com</a>.</p>
+  <p>Thank you for your support!</p>
+  <div class="controls">
+    <div class="leointeg noselect">
+      <img class="leo-img" src="/leoapp128px.png" alt="Leo-Editor">
+      <h1>Leo&nbsp;Editor</h1>
+      <h2>Integration Extensions</h2>
+      <div class="bottom-border"> </div>
+    </div>
+    <div class="github noselect">
+      <a target="_blank" href="https://github.com/sponsors/boltex">🤍 Sponsor on GitHub</a>
+    </div>
+    <div class="support noselect">
+      <a target="_blank" href="https://www.patreon.com/felixgraphx">🤍 Sponsor via Patreon</a>
+    </div>
+    <div class="donate noselect">
+      <a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=3JWX5TH5FL9TL">🤍 Donate via Paypal</a>
+    </div>
+  </div>
+  <div class="buffer">&nbsp;</div>
 </body>
 
 </html>
