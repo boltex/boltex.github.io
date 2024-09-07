@@ -511,9 +511,9 @@ img.video:hover {
   &lt;/p&gt;
 
   &lt;p class="video-links"&gt;
-    &lt;a href="https://www.youtube.com/watch?v=your-video-id" target="_blank" rel="noopener noreferrer"&gt;&lt;img class="video"
+    &lt;a href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank" rel="noopener noreferrer"&gt;&lt;img class="video"
         src="video-button-intro.png" alt="Watch the introduction demo"&gt;&lt;/a&gt;
-    &lt;a href="https://www.youtube.com/watch?v=your-video-id" target="_blank" rel="noopener noreferrer"&gt;&lt;img class="video"
+    &lt;a href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank" rel="noopener noreferrer"&gt;&lt;img class="video"
         src="video-button-demo.png" alt="Watch the video demo"&gt;&lt;/a&gt;
   &lt;/p&gt;
 
