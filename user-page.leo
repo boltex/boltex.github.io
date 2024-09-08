@@ -476,7 +476,8 @@ img.video:hover {
 
   &lt;div class="top-row"&gt;
 
-    &lt;a class="column-link column-leojs" href="https://boltex.github.io/leojs/" target="_blank"&gt;
+    &lt;a class="column-link column-leojs" href="https://boltex.github.io/leojs/" target="_blank"
+      title="Find out more about LeoJS"&gt;
       &lt;h2&gt;&lt;img class="leo-32" src="/leojs32px.png" alt="LeoJS"&gt; Leo&lt;span class="js-logo"&gt;JS&lt;/span&gt; &lt;span
           class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;&lt;/h2&gt;
       &lt;p&gt;A &lt;strong&gt;TypeScript implementation of the Leo&amp;nbsp;Editor&lt;/strong&gt;, scriptable in
@@ -485,7 +486,7 @@ img.video:hover {
     &lt;/a&gt;
 
     &lt;a class="column-link column-leointeg" href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"
-      target="_blank"&gt;
+      target="_blank" title="Find out more about LeoInteg"&gt;
       &lt;h2&gt;&lt;img class="leo-32" src="/leointeg32px.png" alt="LeoJS"&gt; Leo&lt;span class="integ-logo"&gt;Integ&lt;/span&gt; &lt;span
           class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;&lt;/h2&gt;
       &lt;p&gt;The &lt;strong&gt;original Python Leo&amp;nbsp;Editor integrated into VSCode&lt;/strong&gt;. All features are mapped to UI
@@ -499,22 +500,24 @@ img.video:hover {
   &lt;p&gt;I'm Félix, a programmer, musician, and graphic designer based in Montréal.&lt;/p&gt;
 
   &lt;p class="last bold-anchor"&gt;I'm the creator of the
-    &lt;a target="_blank" href="https://boltex.github.io/leojs/"&gt;LeoJS&lt;/a&gt;
+    &lt;a target="_blank" title="Find out more about LeoJS" href="https://boltex.github.io/leojs/"&gt;LeoJS&lt;/a&gt;
     and
-    &lt;a target="_blank" href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"&gt;LeoInteg&lt;/a&gt;,
+    &lt;a target="_blank" title="Find out more about LeoInteg"
+      href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"&gt;LeoInteg&lt;/a&gt;,
     the
-    &lt;a target="_blank" href="https://leo-editor.github.io/leo-editor/"&gt;Leo&amp;nbsp;Editor&lt;/a&gt;
+    &lt;a target="_blank" title="Leo’s Home Page"
+      href="https://leo-editor.github.io/leo-editor/"&gt;Leo&amp;nbsp;Editor&lt;/a&gt;
     extensions for
-    &lt;a target="_blank" href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt;
+    &lt;a target="_blank" title="Visual Studio Code" href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt;
     and
-    &lt;a target="_blank" href="https://vscodium.com//"&gt;VSCodium&lt;/a&gt;
+    &lt;a target="_blank" title="Open Source Software Binaries of VS Code" href="https://vscodium.com//"&gt;VSCodium&lt;/a&gt;.
   &lt;/p&gt;
 
   &lt;p class="video-links"&gt;
-    &lt;a href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank" rel="noopener noreferrer"&gt;&lt;img class="video"
-        src="video-button-intro.png" alt="Watch the introduction demo"&gt;&lt;/a&gt;
-    &lt;a href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank" rel="noopener noreferrer"&gt;&lt;img class="video"
-        src="video-button-demo.png" alt="Watch the video demo"&gt;&lt;/a&gt;
+    &lt;a title="Introduction to LeoJS" href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank"
+      rel="noopener noreferrer"&gt;&lt;img class="video" src="video-button-intro.png" alt="Watch the introduction demo"&gt;&lt;/a&gt;
+    &lt;a title="LeoJS Features Demo" href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank"
+      rel="noopener noreferrer"&gt;&lt;img class="video" src="video-button-demo.png" alt="Watch the video demo"&gt;&lt;/a&gt;
   &lt;/p&gt;
 
   &lt;p&gt;To sponsor the development of these open-source projects, please use the 🤍 buttons below to contribute.
@@ -529,13 +532,16 @@ img.video:hover {
       &lt;div class="bottom-border"&gt; &lt;/div&gt;
     &lt;/div&gt;
     &lt;div class="github noselect"&gt;
-      &lt;a target="_blank" href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
+      &lt;a title="Support Félix on GitHub" target="_blank" href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on
+        GitHub&lt;/a&gt;
     &lt;/div&gt;
     &lt;div class="support noselect"&gt;
-      &lt;a target="_blank" href="https://www.patreon.com/felixgraphx"&gt;🤍 Sponsor via Patreon&lt;/a&gt;
+      &lt;a title="Support Félix on Patreon" target="_blank" href="https://www.patreon.com/felixgraphx"&gt;🤍 Sponsor via
+        Patreon&lt;/a&gt;
     &lt;/div&gt;
     &lt;div class="donate noselect"&gt;
-      &lt;a target="_blank" href="https://www.paypal.com/donate/?hosted_button_id=3JWX5TH5FL9TL"&gt;🤍 Donate via Paypal&lt;/a&gt;
+      &lt;a title="Support Félix on Paypal" target="_blank"
+        href="https://www.paypal.com/donate/?hosted_button_id=3JWX5TH5FL9TL"&gt;🤍 Donate via Paypal&lt;/a&gt;
     &lt;/div&gt;
   &lt;/div&gt;
   &lt;div class="buffer"&gt;&amp;nbsp;&lt;/div&gt;
