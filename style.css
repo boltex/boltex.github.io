@@ -339,19 +339,24 @@ a.column-link h2 {
 }
 
 p.video-links {
-  margin-bottom: -8px !important;
+  margin-bottom: -6px !important;
 }
 
 p.video-links a {
-  margin-left: 12px;
+  margin-right: 12px;
 }
 
 img.video {
-  transition: transform 0.12s ease;
+  position: relative;
+  opacity: 0.75;
+  width: 240px;
+  transition: transform 0.12s ease, opacity 0.1s linear;
 }
 
 img.video:hover {
-  transform: scale(1.1); /* Grows the image slightly on hover */
+  opacity: 1;
+  z-index: 2;
+  transform: scale(1.2);
 }
 
 /* Responsive design */

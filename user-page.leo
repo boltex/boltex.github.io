@@ -363,19 +363,24 @@ a.column-link h2 {
 }
 
 p.video-links {
-  margin-bottom: -8px !important;
+  margin-bottom: -6px !important;
 }
 
 p.video-links a {
-  margin-left: 12px;
+  margin-right: 12px;
 }
 
 img.video {
-  transition: transform 0.12s ease;
+  position: relative;
+  opacity: 0.75;
+  width: 240px;
+  transition: transform 0.12s ease, opacity 0.1s linear;
 }
 
 img.video:hover {
-  transform: scale(1.1); /* Grows the image slightly on hover */
+  opacity: 1;
+  z-index: 2;
+  transform: scale(1.2);
 }
 
 /* Responsive design */
@@ -505,8 +510,7 @@ img.video:hover {
     &lt;a target="_blank" title="Find out more about LeoInteg"
       href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"&gt;LeoInteg&lt;/a&gt;,
     the
-    &lt;a target="_blank" title="Leo’s Home Page"
-      href="https://leo-editor.github.io/leo-editor/"&gt;Leo&amp;nbsp;Editor&lt;/a&gt;
+    &lt;a target="_blank" title="Leo’s Home Page" href="https://leo-editor.github.io/leo-editor/"&gt;Leo&amp;nbsp;Editor&lt;/a&gt;
     extensions for
     &lt;a target="_blank" title="Visual Studio Code" href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt;
     and
@@ -520,8 +524,8 @@ img.video:hover {
       rel="noopener noreferrer"&gt;&lt;img class="video" src="video-button-demo.png" alt="Watch the video demo"&gt;&lt;/a&gt;
   &lt;/p&gt;
 
-  &lt;p&gt;To sponsor the development of these open-source projects, please use the 🤍 buttons below to contribute.
-  &lt;/p&gt;
+  &lt;p&gt;&lt;strong&gt;To sponsor the development of these open-source projects, please use the 🤍 buttons below to contribute.
+    &lt;/strong&gt;&lt;/p&gt;
   &lt;p&gt;Feel free to reach out anytime at &lt;a href="mailto:felixgraphx@gmail.com"&gt;felixgraphx@gmail.com&lt;/a&gt;.&lt;/p&gt;
   &lt;p&gt;Thank you for your support!&lt;/p&gt;
   &lt;div class="controls"&gt;
