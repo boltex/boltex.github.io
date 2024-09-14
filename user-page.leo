@@ -66,6 +66,15 @@ p.bold-anchor a {
   font-weight: bold;
 }
 
+p.video-anchor a {
+  font-weight: bold;
+  font-style: italic;
+  color: #b14621;
+}
+p.video-anchor a:hover {
+  color: #790000;
+}
+
 h1 {
   margin: 0rem 2rem 1rem 4rem;
   font-size: 3rem;
@@ -103,10 +112,10 @@ p {
   top: -1rem;
   left: 2.75rem;
 }
-
+/* 
 .controls:hover .leo-img {
   opacity: 1;
-}
+} */
 
 .github {
   margin: 0.5rem 0 0 1.5rem;
@@ -125,6 +134,7 @@ p {
 
 .github:hover {
   background-color: #b37400;
+  transform: scale(1.17);
 }
 
 .donate {
@@ -144,6 +154,7 @@ p {
 
 .donate:hover {
   background-color: #033d9a;
+  transform: scale(1.17);
 }
 
 .buffer {
@@ -173,6 +184,7 @@ p {
 
 .support:hover {
   background-color: #8d1d55;
+  transform: scale(1.17);
 }
 
 .vsix {
@@ -225,9 +237,9 @@ p {
   margin: 2rem 3rem 0 2rem;
   padding-left: 8rem;
   line-height: 5rem;
-  font-family: "Times New Roman", Times, serif;
+  font-family: "Georgia", "Palatino Linotype", "Times New Roman", Times, serif;
   font-size: 4.5rem;
-  color: #201c1f;
+  color: #c9c9c9;
   text-shadow: 0.02em 0.02em #636161aa, -0.02em -0.02em #fff;
   text-align: right;
   margin-bottom: 0;
@@ -305,8 +317,13 @@ a.column-link:hover {
   transform: scale(1.07);
   background-color: #ffffff;
   z-index: 2;
-  /* border-radius: 20px 20px 20px 20px; */
-  /* animation: skew 0.2s ease-in-out; */
+  border: 9px solid #fff;
+}
+
+a.column-link:hover .more-info {
+  font-weight: bold;
+  color: rgb(151, 43, 0);
+  transform: scale(1.27);
 }
 
 a.column-link p {
@@ -318,10 +335,12 @@ a.column-link h2 {
 }
 
 .column-leojs {
-  background-color: #fdf8ec;
+  background-color: #fff6e1;
+  border: 9px solid #f4f0cf;
 }
 .column-leointeg {
   background-color: #f9e7df;
+  border: 9px solid #e8d5cd;
 }
 .leo-32 {
   vertical-align: bottom;
@@ -360,6 +379,7 @@ a.column-link h2 {
   margin: 0 !important;
   color: #485c69;
   text-align: center;
+  transition: transform 0.1s ease-in-out, color 0.1s linear;
 }
 
 p.video-links {
@@ -517,20 +537,30 @@ img.video:hover {
     &lt;a target="_blank" title="Open Source Software Binaries of VS Code" href="https://vscodium.com//"&gt;VSCodium&lt;/a&gt;.
   &lt;/p&gt;
 
-  &lt;p class="video-links"&gt;
+  &lt;p class="video-anchor"&gt;New to Leo or outline editors? Dive into the 📺&amp;nbsp;&lt;a title="Introduction to LeoJS"
+      href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank"
+      rel="noopener noreferrer"&gt;Intro&amp;nbsp;to&amp;nbsp;Leo&lt;/a&gt;
+    video to get started.
+  &lt;/p&gt;
+  &lt;p class="video-anchor"&gt;
+    For a fast-track on LeoJS's capabilities or to see it in action within VSCode for the web,
+    check out the 📺&amp;nbsp;&lt;a title="LeoJS Features Demo" href="https://www.youtube.com/watch?v=M_mKXSbVGdE"
+      target="_blank" rel="noopener noreferrer"&gt;LeoJS&amp;nbsp;Features&amp;nbsp;Demo&lt;/a&gt;.
+  &lt;/p&gt;
+
+  &lt;!-- &lt;p class="video-links"&gt;
     &lt;a title="Introduction to LeoJS" href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank"
       rel="noopener noreferrer"&gt;&lt;img class="video" src="video-button-intro.png" alt="Watch the introduction demo"&gt;&lt;/a&gt;
     &lt;a title="LeoJS Features Demo" href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank"
       rel="noopener noreferrer"&gt;&lt;img class="video" src="video-button-demo.png" alt="Watch the video demo"&gt;&lt;/a&gt;
-  &lt;/p&gt;
+  &lt;/p&gt; --&gt;
 
   &lt;p&gt;&lt;strong&gt;To sponsor the development of these open-source projects, please use the 🤍 buttons below to contribute.
     &lt;/strong&gt;&lt;/p&gt;
   &lt;p&gt;Feel free to reach out anytime at &lt;a href="mailto:felixgraphx@gmail.com"&gt;felixgraphx@gmail.com&lt;/a&gt;.&lt;/p&gt;
-  &lt;p&gt;Thank you for your support!&lt;/p&gt;
   &lt;div class="controls"&gt;
     &lt;div class="leointeg noselect"&gt;
-      &lt;img class="leo-img" src="/leoapp128px.png" alt="Leo-Editor"&gt;
+      &lt;!-- &lt;img class="leo-img" src="/leoapp128px.png" alt="Leo-Editor"&gt; --&gt;
       &lt;h1&gt;Leo&amp;nbsp;Editor&lt;/h1&gt;
       &lt;h2&gt;Integration Extensions&lt;/h2&gt;
       &lt;div class="bottom-border"&gt; &lt;/div&gt;
