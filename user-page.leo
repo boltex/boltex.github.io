@@ -84,7 +84,7 @@ h1 {
 p {
   margin: 1rem 4rem;
   font-size: 1rem;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Trebuchet MS", Calibri, sans-serif;
 }
 
 .noselect {
