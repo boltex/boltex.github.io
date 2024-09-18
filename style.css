@@ -44,7 +44,6 @@ p.bold-anchor a {
 
 p.video-anchor a {
   font-weight: bold;
-  font-style: italic;
   color: #b14621;
 }
 p.video-anchor a:hover {
@@ -144,9 +143,8 @@ p {
 }
 
 .support {
-  margin: 0.5rem 0 0 1.5rem;
+  margin: 0.775rem 0 0 1.5rem;
   display: inline-block;
-
   background-color: #7c546d;
   border-radius: 0.2rem;
   border: 2px solid #b1899a;
@@ -237,7 +235,7 @@ p {
 }
 
 .leointeg .bottom-border {
-  min-height: 0.5rem;
+  /* min-height: 0.5rem; */
   background: linear-gradient(90deg, #aa7336 0%, #d89c39 100%);
 }
 
@@ -333,9 +331,7 @@ a.column-link h2 {
 .subtitle {
   font-style: italic;
   font-family: Tahoma, sans-serif;
-  /* color: #78a1b4; */
   color: #6b8a99;
-  font-style: italic;
   font-weight: 200;
   font-family: Tahoma, sans-serif;
   font-size: 23px;
