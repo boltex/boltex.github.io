@@ -68,7 +68,6 @@ p.bold-anchor a {
 
 p.video-anchor a {
   font-weight: bold;
-  font-style: italic;
   color: #b14621;
 }
 p.video-anchor a:hover {
@@ -168,9 +167,8 @@ p {
 }
 
 .support {
-  margin: 0.5rem 0 0 1.5rem;
+  margin: 0.775rem 0 0 1.5rem;
   display: inline-block;
-
   background-color: #7c546d;
   border-radius: 0.2rem;
   border: 2px solid #b1899a;
@@ -261,7 +259,7 @@ p {
 }
 
 .leointeg .bottom-border {
-  min-height: 0.5rem;
+  /* min-height: 0.5rem; */
   background: linear-gradient(90deg, #aa7336 0%, #d89c39 100%);
 }
 
@@ -357,9 +355,7 @@ a.column-link h2 {
 .subtitle {
   font-style: italic;
   font-family: Tahoma, sans-serif;
-  /* color: #78a1b4; */
   color: #6b8a99;
-  font-style: italic;
   font-weight: 200;
   font-family: Tahoma, sans-serif;
   font-size: 23px;
@@ -524,7 +520,7 @@ img.video:hover {
 
   &lt;p&gt;I'm Félix, a programmer, musician, and graphic designer based in Montréal.&lt;/p&gt;
 
-  &lt;p class="last bold-anchor"&gt;I'm the creator of the
+  &lt;p class="last bold-anchor"&gt;I'm the creator of
     &lt;a target="_blank" title="Find out more about LeoJS" href="https://boltex.github.io/leojs/"&gt;LeoJS&lt;/a&gt;
     and
     &lt;a target="_blank" title="Find out more about LeoInteg"
@@ -536,8 +532,7 @@ img.video:hover {
     and
     &lt;a target="_blank" title="Open Source Software Binaries of VS Code" href="https://vscodium.com//"&gt;VSCodium&lt;/a&gt;.
   &lt;/p&gt;
-
-  &lt;p class="video-anchor"&gt;New to Leo or outline editors? Dive into the 📺&amp;nbsp;&lt;a title="Introduction to LeoJS"
+  &lt;p class="video-anchor"&gt;&lt;em&gt;New to Leo or outline editors?&lt;/em&gt; Dive into the 📺&amp;nbsp;&lt;a title="Introduction to LeoJS"
       href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank"
       rel="noopener noreferrer"&gt;Intro&amp;nbsp;to&amp;nbsp;Leo&lt;/a&gt;
     video to get started.
@@ -557,7 +552,7 @@ img.video:hover {
 
   &lt;p&gt;&lt;strong&gt;To sponsor the development of these open-source projects, please use the 🤍 buttons below to contribute.
     &lt;/strong&gt;&lt;/p&gt;
-  &lt;p&gt;Feel free to reach out anytime at &lt;a href="mailto:felixgraphx@gmail.com"&gt;felixgraphx@gmail.com&lt;/a&gt;.&lt;/p&gt;
+  &lt;!-- &lt;p&gt;Feel free to reach out anytime at &lt;a href="mailto:felixgraphx@gmail.com"&gt;felixgraphx@gmail.com&lt;/a&gt;.&lt;/p&gt; --&gt;
   &lt;div class="controls"&gt;
     &lt;div class="leointeg noselect"&gt;
       &lt;!-- &lt;img class="leo-img" src="/leoapp128px.png" alt="Leo-Editor"&gt; --&gt;
