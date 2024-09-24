@@ -312,6 +312,7 @@ p {
 }
 
 a.column-link {
+  max-width: 500px;
   text-decoration: none;
   color: #201c1f;
   position: relative;
@@ -319,10 +320,8 @@ a.column-link {
   background-image: url("/banner-blur-narrow-trans.png");
   background-repeat: no-repeat;
   background-position: left 800px center;
-
   transition: transform 0.1s ease-in-out, background-position 0.2s ease-in-out,
     background-color 0.5s;
-
   flex: 1;
   margin: 10px;
   padding: 20px;
@@ -354,14 +353,15 @@ a.column-link p {
 }
 a.column-link h2 {
   margin-bottom: 0.5rem;
+  position: relative;
 }
 
 .column-leojs {
-  background-color: #fff6e1;
+  background-color: white;
   border: 9px solid #f4f0cf;
 }
 .column-leointeg {
-  background-color: #f9e7df;
+  background-color: white;
   border: 9px solid #e8d5cd;
 }
 .leo-32 {
@@ -389,7 +389,6 @@ a.column-link h2 {
 
 .top-row {
   display: flex;
-  justify-content: space-between;
   padding: 20px;
 }
 
@@ -421,6 +420,27 @@ img.video:hover {
   opacity: 1;
   z-index: 2;
   transform: scale(1.2);
+}
+
+.badge-new {
+  position: absolute;
+  background-color: red;
+  color: white;
+
+  right: 10%;
+  top: 6px;
+
+  height: 30px;
+  width: 30px;
+
+  padding: 4px 4px;
+  font-size: 15px;
+  line-height: 29px;
+  text-align: center;
+  border-radius: 50%;
+  transform: rotate(6deg);
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  border: 3px solid white;
 }
 
 /* Responsive design */
@@ -523,6 +543,7 @@ img.video:hover {
 
     &lt;a class="column-link column-leojs" href="https://boltex.github.io/leojs/" target="_blank"
       title="Find out more about LeoJS"&gt;
+      &lt;div class="badge-new"&gt;New!&lt;/div&gt;
       &lt;h2&gt;&lt;img class="leo-32" src="/leojs32px.png" alt="LeoJS"&gt; Leo&lt;span class="js-logo"&gt;JS&lt;/span&gt; &lt;span
           class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;&lt;/h2&gt;
       &lt;p&gt;A &lt;strong&gt;TypeScript implementation of the Leo&amp;nbsp;Editor&lt;/strong&gt;, scriptable in
