@@ -543,7 +543,7 @@ img.video:hover {
 
     &lt;a class="column-link column-leojs" href="https://boltex.github.io/leojs/" target="_blank"
       title="Find out more about LeoJS"&gt;
-      &lt;div class="badge-new"&gt;New!&lt;/div&gt;
+      &lt;div class="badge-new"&gt;NEW&lt;/div&gt;
       &lt;h2&gt;&lt;img class="leo-32" src="/leojs32px.png" alt="LeoJS"&gt; Leo&lt;span class="js-logo"&gt;JS&lt;/span&gt; &lt;span
           class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;&lt;/h2&gt;
       &lt;p&gt;A &lt;strong&gt;TypeScript implementation of the Leo&amp;nbsp;Editor&lt;/strong&gt;, scriptable in
