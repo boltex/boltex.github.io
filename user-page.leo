@@ -563,7 +563,7 @@ img.video:hover {
   &lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"&gt;
   &lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"&gt;
   &lt;link rel="manifest" href="/site.webmanifest"&gt;
-  &lt;link rel="stylesheet" href="style.css"&gt;
+  &lt;link rel="stylesheet" href="style.css?v=1.0"&gt;
 &lt;/head&gt;
 
 </t>
