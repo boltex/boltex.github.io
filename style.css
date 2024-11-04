@@ -56,10 +56,40 @@ h1 {
   font-family: "Courier New", Courier, monospace;
 }
 
+.main-title {
+  margin: 1rem 2rem 1rem 4rem;
+  font-weight: 700;
+}
+
 p {
   margin: 1rem 4rem;
   font-size: 1rem;
   font-family: "Trebuchet MS", Calibri, sans-serif;
+}
+
+.photo,
+.blended {
+  float: right;
+  margin-top: -0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: 8px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  mix-blend-mode: saturation;
+  user-select: none;
+}
+
+.blended {
+  width: 160px;
+  height: 160px;
+  background-image: url(/felix-160px.jpg);
+  background-color: rgb(220, 186, 169);
+  background-blend-mode: multiply;
+  transition: background-color 0.5s;
+}
+
+.blended:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 .noselect {
@@ -198,7 +228,7 @@ p {
 
 .leointeg {
   position: relative;
-  margin-top: 1rem;
+  margin-top: 0rem;
 }
 
 .download-label {
@@ -208,7 +238,7 @@ p {
 }
 
 .leointeg h1 {
-  margin: 2rem 3rem 0 2rem;
+  margin: 0rem 3rem 0 2rem;
   padding-left: 8rem;
   line-height: 5rem;
   font-family: "Georgia", "Palatino Linotype", "Times New Roman", Times, serif;
@@ -262,7 +292,7 @@ p {
   }
 
   .leointeg {
-    margin-top: 0.25rem;
+    margin-top: 0rem;
   }
 
   .leointeg h1 {
@@ -365,7 +395,7 @@ a.column-link h2 {
 
 .top-row {
   display: flex;
-  padding: 20px;
+  padding: 0 20px 0 20px;
 }
 
 .more-info {
