@@ -80,10 +80,40 @@ h1 {
   font-family: "Courier New", Courier, monospace;
 }
 
+.main-title {
+  margin: 1rem 2rem 1rem 4rem;
+  font-weight: 700;
+}
+
 p {
   margin: 1rem 4rem;
   font-size: 1rem;
   font-family: "Trebuchet MS", Calibri, sans-serif;
+}
+
+.photo,
+.blended {
+  float: right;
+  margin-top: -0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  border: 8px solid white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  mix-blend-mode: saturation;
+  user-select: none;
+}
+
+.blended {
+  width: 160px;
+  height: 160px;
+  background-image: url(/felix-160px.jpg);
+  background-color: rgb(220, 186, 169);
+  background-blend-mode: multiply;
+  transition: background-color 0.5s;
+}
+
+.blended:hover {
+  background-color: rgb(255, 255, 255);
 }
 
 .noselect {
@@ -222,7 +252,7 @@ p {
 
 .leointeg {
   position: relative;
-  margin-top: 1rem;
+  margin-top: 0rem;
 }
 
 .download-label {
@@ -232,7 +262,7 @@ p {
 }
 
 .leointeg h1 {
-  margin: 2rem 3rem 0 2rem;
+  margin: 0rem 3rem 0 2rem;
   padding-left: 8rem;
   line-height: 5rem;
   font-family: "Georgia", "Palatino Linotype", "Times New Roman", Times, serif;
@@ -286,7 +316,7 @@ p {
   }
 
   .leointeg {
-    margin-top: 0.25rem;
+    margin-top: 0rem;
   }
 
   .leointeg h1 {
@@ -389,7 +419,7 @@ a.column-link h2 {
 
 .top-row {
   display: flex;
-  padding: 20px;
+  padding: 0 20px 0 20px;
 }
 
 .more-info {
@@ -539,29 +569,11 @@ img.video:hover {
 </t>
 <t tx="fil.20210718013948.1">&lt;body&gt;
 
-  &lt;div class="top-row"&gt;
+  &lt;!-- &lt;img class="photo" src="/felix-160px.jpg" alt="Félix"&gt; --&gt;
+  &lt;div class="photo blended"  alt="Félix"&gt;&lt;/div&gt;
 
-    &lt;a class="column-link column-leojs" href="https://boltex.github.io/leojs/" target="_blank"
-      title="Find out more about LeoJS"&gt;
-      &lt;div class="badge-new"&gt;NEW&lt;/div&gt;
-      &lt;h2&gt;&lt;img class="leo-32" src="/leojs32px.png" alt="LeoJS"&gt; Leo&lt;span class="js-logo"&gt;JS&lt;/span&gt; &lt;span
-          class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;&lt;/h2&gt;
-      &lt;p&gt;A &lt;strong&gt;TypeScript implementation of the Leo&amp;nbsp;Editor&lt;/strong&gt;, scriptable in
-        JavaScript and TypeScript. LeoJS can also be used in a browser with VSCode for the web.&lt;/p&gt;
-      &lt;p class="more-info"&gt;Find out more about LeoJS...&lt;/p&gt;
-    &lt;/a&gt;
 
-    &lt;a class="column-link column-leointeg" href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"
-      target="_blank" title="Find out more about LeoInteg"&gt;
-      &lt;h2&gt;&lt;img class="leo-32" src="/leointeg32px.png" alt="LeoJS"&gt; Leo&lt;span class="integ-logo"&gt;Integ&lt;/span&gt; &lt;span
-          class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;&lt;/h2&gt;
-      &lt;p&gt;The &lt;strong&gt;original Python Leo&amp;nbsp;Editor integrated into VSCode&lt;/strong&gt;. All features are mapped to UI
-        controls, and their original keyboard shortcuts.&lt;/p&gt;
-      &lt;p class="more-info"&gt;Find out more about LeoInteg...&lt;/p&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
-
-  &lt;h1&gt;Hello World&lt;/h1&gt;
+  &lt;h1 class="main-title"&gt;Hello World&lt;/h1&gt;
 
   &lt;p&gt;I'm Félix, a programmer, musician, and graphic designer based in Montréal.&lt;/p&gt;
 
@@ -588,19 +600,30 @@ img.video:hover {
       target="_blank" rel="noopener noreferrer"&gt;LeoJS&amp;nbsp;Features&amp;nbsp;Demo&lt;/a&gt;.
   &lt;/p&gt;
 
-  &lt;!-- &lt;p class="video-links"&gt;
-    &lt;a title="Introduction to LeoJS" href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank"
-      rel="noopener noreferrer"&gt;&lt;img class="video" src="video-button-intro.png" alt="Watch the introduction demo"&gt;&lt;/a&gt;
-    &lt;a title="LeoJS Features Demo" href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank"
-      rel="noopener noreferrer"&gt;&lt;img class="video" src="video-button-demo.png" alt="Watch the video demo"&gt;&lt;/a&gt;
-  &lt;/p&gt; --&gt;
+  &lt;div class="top-row"&gt;
 
-  &lt;p&gt;&lt;strong&gt;To sponsor the development of these open-source projects, please use the 🤍 buttons below to contribute.
-    &lt;/strong&gt;&lt;/p&gt;
-  &lt;!-- &lt;p&gt;Feel free to reach out anytime at &lt;a href="mailto:felixgraphx@gmail.com"&gt;felixgraphx@gmail.com&lt;/a&gt;.&lt;/p&gt; --&gt;
+    &lt;a class="column-link column-leojs" href="https://boltex.github.io/leojs/" target="_blank"
+      title="Find out more about LeoJS"&gt;
+      &lt;div class="badge-new"&gt;NEW&lt;/div&gt;
+      &lt;h2&gt;&lt;img class="leo-32" src="/leojs32px.png" alt="LeoJS"&gt; Leo&lt;span class="js-logo"&gt;JS&lt;/span&gt; &lt;span
+          class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;&lt;/h2&gt;
+      &lt;p&gt;A &lt;strong&gt;TypeScript implementation of the Leo&amp;nbsp;Editor&lt;/strong&gt;, scriptable in
+        JavaScript and TypeScript. LeoJS can also be used in a browser with VSCode for the web.&lt;/p&gt;
+      &lt;p class="more-info"&gt;Find out more about LeoJS...&lt;/p&gt;
+    &lt;/a&gt;
+
+    &lt;a class="column-link column-leointeg" href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"
+      target="_blank" title="Find out more about LeoInteg"&gt;
+      &lt;h2&gt;&lt;img class="leo-32" src="/leointeg32px.png" alt="LeoJS"&gt; Leo&lt;span class="integ-logo"&gt;Integ&lt;/span&gt; &lt;span
+          class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;&lt;/h2&gt;
+      &lt;p&gt;The &lt;strong&gt;original Python Leo&amp;nbsp;Editor integrated into VSCode&lt;/strong&gt;. All features are mapped to UI
+        controls, and their original keyboard shortcuts.&lt;/p&gt;
+      &lt;p class="more-info"&gt;Find out more about LeoInteg...&lt;/p&gt;
+    &lt;/a&gt;
+  &lt;/div&gt;
+
   &lt;div class="controls"&gt;
     &lt;div class="leointeg noselect"&gt;
-      &lt;!-- &lt;img class="leo-img" src="/leoapp128px.png" alt="Leo-Editor"&gt; --&gt;
       &lt;h1&gt;Leo&amp;nbsp;Editor&lt;/h1&gt;
       &lt;h2&gt;Integration Extensions&lt;/h2&gt;
       &lt;div class="bottom-border"&gt; &lt;/div&gt;
