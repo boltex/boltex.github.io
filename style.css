@@ -75,7 +75,6 @@ p {
   border-radius: 50%;
   border: 8px solid white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  mix-blend-mode: saturation;
   user-select: none;
 }
 
@@ -83,7 +82,7 @@ p {
   width: 160px;
   height: 160px;
   background-image: url(/felix-160px.jpg);
-  background-color: rgb(220, 186, 169);
+  background-color: rgb(255, 234, 223);
   background-blend-mode: multiply;
   transition: background-color 0.5s;
 }

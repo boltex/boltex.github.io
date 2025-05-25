@@ -99,7 +99,6 @@ p {
   border-radius: 50%;
   border: 8px solid white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  mix-blend-mode: saturation;
   user-select: none;
 }
 
@@ -107,7 +106,7 @@ p {
   width: 160px;
   height: 160px;
   background-image: url(/felix-160px.jpg);
-  background-color: rgb(220, 186, 169);
+  background-color: rgb(255, 234, 223);
   background-blend-mode: multiply;
   transition: background-color 0.5s;
 }
@@ -555,7 +554,6 @@ img.video:hover {
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-6YLK1QW8SS');
   &lt;/script&gt;
   &lt;link rel="shortcut icon" href="/favicon.ico"&gt;
@@ -563,15 +561,13 @@ img.video:hover {
   &lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"&gt;
   &lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"&gt;
   &lt;link rel="manifest" href="/site.webmanifest"&gt;
-  &lt;link rel="stylesheet" href="style.css?v=1.0"&gt;
+  &lt;link rel="stylesheet" href="style.css?v=1.1"&gt;
 &lt;/head&gt;
 
 </t>
 <t tx="fil.20210718013948.1">&lt;body&gt;
 
-  &lt;!-- &lt;img class="photo" src="/felix-160px.jpg" alt="Félix"&gt; --&gt;
   &lt;div class="photo blended"  alt="Félix"&gt;&lt;/div&gt;
-
 
   &lt;h1 class="main-title"&gt;Hello World&lt;/h1&gt;
 
