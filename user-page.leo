@@ -567,7 +567,7 @@ img.video:hover {
 </t>
 <t tx="fil.20210718013948.1">&lt;body&gt;
 
-  &lt;div class="photo blended"  alt="Félix"&gt;&lt;/div&gt;
+  &lt;div class="photo blended" alt="Félix"&gt;&lt;/div&gt;
 
   &lt;h1 class="main-title"&gt;Hello World&lt;/h1&gt;
 
