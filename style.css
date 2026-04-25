@@ -29,16 +29,13 @@ html {
 body {
   min-height: 100vh;
   margin: 0;
-
   font-family: var(--font-body);
   color: var(--color-text);
-
   display: flex;
   justify-content: center;
   padding: 0;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
-
   background-color: #f7f7f7;
   background-repeat: no-repeat;
   background-position: bottom right;
@@ -48,15 +45,25 @@ body {
 }
 
 canvas {
+  display: none;
   position: fixed;
   inset: 0; /* shorthand for top/right/bottom/left: 0 */
   width: 100vw;
   height: 100vh; /* Fallback for browsers that don't support dvh */
   height: 100dvh;
-  display: block;
   background: #fff;
   z-index: -1;
   pointer-events: none;
+  opacity: 0.25;
+}
+
+body.webgl-ready {
+  background-image: none;
+}
+
+body.webgl-ready canvas {
+  display: block;
+  background: #fff;
 }
 
 a {

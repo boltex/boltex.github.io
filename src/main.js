@@ -10,10 +10,24 @@ const ORBIT_TILT_AMPLITUDE = 8;
 const DRAMATIC_PASS_FREQUENCY = 0.23;
 
 const canvas = document.getElementById("gl-canvas");
-const gl = canvas.getContext("webgl");
+
+function getWebGLContext(element) {
+    try {
+        return (
+            element.getContext("webgl", { antialias: true }) ||
+            element.getContext("experimental-webgl")
+        );
+    } catch {
+        return null;
+    }
+}
+
+const gl = canvas ? getWebGLContext(canvas) : null;
 
 if (!gl) {
-    throw new Error("WebGL is not supported by this browser.");
+    console.warn("WebGL is not supported. Using background image fallback.");
+} else {
+    document.body.classList.add("webgl-ready");
 }
 
 function createShader(glContext, type, source) {
@@ -375,7 +389,7 @@ function render(milliseconds) {
     gl.uniformMatrix4fv(uniforms.projection, false, projection);
     gl.uniformMatrix3fv(uniforms.normalMatrix, false, normalMatrix);
     gl.uniform3fv(uniforms.fogColor, fogColor);
-    gl.uniform1f(uniforms.fogNear, orbitRadius * 0.25);
+    gl.uniform1f(uniforms.fogNear, orbitRadius * 0.02);
     gl.uniform1f(uniforms.fogFar, orbitRadius * 1.4);
     gl.uniform3fv(uniforms.cameraPosition, eye);
     gl.uniform3fv(uniforms.lightPositions, lightPositions);
