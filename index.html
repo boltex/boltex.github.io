@@ -30,6 +30,7 @@
 </head>
 
 <body>
+  <canvas id="gl-canvas" aria-label="WebGL cube array demo"></canvas>
   <main class="page">
     <header class="hero glass">
       <div class="hero-layout">
@@ -62,15 +63,6 @@
             the Leo Editor extensions for VS Code and VSCodium.
           </p>
 
-          <div class="hero-buttons">
-            <a class="cta-button primary" title="Watch the Intro to Leo video"
-              href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank" rel="noopener noreferrer">📺 Intro to
-              Leo</a>
-            <a class="cta-button primary" title="Watch the LeoJS Features Demo video"
-              href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank" rel="noopener noreferrer">📺 LeoJS
-              Features Demo</a>
-          </div>
-
           <!-- <h1 class="main-title">Hello World</h1>
           <p class="intro">I'm Félix, a programmer, musician, and graphic designer based in Montréal.</p>
           <p class="intro highlight-links">I'm the creator of <a target="_blank" title="Leo for the Browser"
@@ -99,7 +91,17 @@
 
     <section class="product-section glass">
       <div class="section-heading">
-        <h2>Build with Leo</h2>
+        <h2>Leo Editor Integration Extensions</h2>
+
+        <div class="hero-buttons">
+          <a class="cta-button primary" title="Watch the Intro to Leo video"
+            href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank" rel="noopener noreferrer">📺 Intro to
+            Leo</a>
+          <a class="cta-button primary" title="Watch the LeoJS Features Demo video"
+            href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank" rel="noopener noreferrer">📺 LeoJS
+            Features Demo</a>
+        </div>
+
         <p>Explore polished tools that bring Leo’s outlining power to modern editors.</p>
       </div>
       <div class="product-grid">
@@ -148,6 +150,8 @@
       </div>
     </section>
   </main>
+  <script type="module" src="./src/main.js"></script>
+
 </body>
 
 </html>
