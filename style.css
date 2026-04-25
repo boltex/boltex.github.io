@@ -1,6 +1,5 @@
 :root {
   --font-body: "Inter", "Segoe UI", sans-serif;
-  /* --font-heading: "Source Serif 4", "Georgia", serif; */
   --font-heading: "Courier New", Courier, monospace;
   --color-page: #f9f5f2;
   --color-text: #201920;
@@ -149,7 +148,7 @@ a:hover {
     box-shadow 0.4s ease;
 }
 
-.blended:hover {
+.hero:hover .blended {
   transform: translateY(-6px) scale(1.02);
   background-color: rgba(120, 111, 99, 0.05);
   box-shadow: 0 24px 55px -26px rgba(31, 12, 60, 0.55);
@@ -192,7 +191,14 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  /* margin-top: 0.5rem; */
+}
+
+.product-section:hover .slogan {
+  color: #68490b;
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
+  font-size: 1.03rem;
 }
 
 .cta-button {
@@ -205,9 +211,10 @@ a:hover {
   text-decoration: none;
   letter-spacing: 0.02em;
   transition:
-    transform 0.18s ease,
+    transform 0.13s ease,
     box-shadow 0.18s ease,
     background 0.18s ease,
+    filter 0.18s ease,
     color 0.18s ease,
     border-color 0.18s ease;
   border: 1px solid transparent;
@@ -219,9 +226,18 @@ a:hover {
   box-shadow: 0 18px 32px -20px rgba(255, 122, 24, 0.55);
 }
 
+.cta-button.primary img {
+  filter: grayscale(33%);
+}
 .cta-button.primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 20px 36px -18px rgba(255, 122, 24, 0.6);
+  color: black;
+  filter: brightness(1.18) saturate(1.3);
+}
+
+.cta-button.primary:hover img {
+  filter: grayscale(23%);
 }
 
 .cta-button.outline {
@@ -247,7 +263,23 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  margin-bottom: clamp(1.2rem, 3vw, 1.8rem);
+  margin-bottom: clamp(0.2rem, 3vw, 0.7rem);
+}
+
+.support-message {
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.support-section:hover .support-message {
+  color: #393537;
+}
+.support-section:hover .support-message a {
+  color: #b65500;
+}
+.support-section:hover .support-message {
+  font-size: 1.02rem;
 }
 
 .section-heading h2 {
@@ -294,7 +326,7 @@ a:hover {
   content: "→";
   position: absolute;
   right: 24px;
-  bottom: 20px;
+  bottom: 26px;
   font-size: 1.4rem;
   color: rgba(32, 28, 31, 0.25);
   transition:
@@ -308,23 +340,22 @@ a:hover {
   border-color: rgba(255, 255, 255, 0.85);
 }
 
+.product-card:hover .more-info {
+  font-size: 1.05rem;
+}
+
 .product-card:hover::after {
   transform: translateX(6px);
   color: var(--color-accent);
 }
 
 .product-card h2 {
+  margin-top: 6px;
   font-family: "Arial", sans-serif;
   margin-bottom: 0;
   position: relative;
   color: black;
   line-height: 1;
-  /* margin: 0;
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  font-size: 1.65rem;
-  line-height: 1.3; */
 }
 
 .product-card p {
@@ -338,9 +369,11 @@ a:hover {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-accent);
+  font-style: italic;
   transition:
     color 0.2s ease,
-    transform 0.2s ease;
+    transform 0.2s ease,
+    font-size 0.2s ease;
 }
 
 .product-card:hover .more-info {
@@ -360,8 +393,15 @@ a:hover {
   background: linear-gradient(
     135deg,
     rgba(249, 245, 255, 0.92) 0%,
-    rgba(237, 227, 255, 0.82) 100%
+    rgb(255 234 227 / 82%) 100%
   );
+}
+
+.slogan {
+  text-align: center;
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
 }
 
 .leo-32 {
@@ -372,29 +412,14 @@ a:hover {
   background-color: #f7e018;
   padding-right: 9px;
   padding-top: 9px;
-  /* background-color: #f7e018;
-  padding: 0.1rem 0.4rem;
-  border-radius: 0.35rem;
-  color: #201c1f;
-  margin-left: 0.15rem;
-  font-weight: 700; */
 }
 
 .integ-logo {
   color: #9f4321;
   font-weight: 700;
-  /* margin-left: 0.15rem; */
 }
 
 .subtitle {
-  /* display: block;
-  font-size: 0.95rem;
-  font-family: var(--font-body);
-  font-weight: 600;
-  color: #6b8a99;
-  text-shadow: none;
-  letter-spacing: 0.03em; */
-
   color: #6b8a99;
   font-family: Tahoma, sans-serif;
   font-style: italic;
@@ -483,6 +508,7 @@ a:hover {
   text-decoration: none;
   color: #fff;
   transition:
+    background 0.18s ease,
     transform 0.18s ease,
     box-shadow 0.18s ease,
     filter 0.18s ease;
@@ -490,21 +516,31 @@ a:hover {
 }
 
 .support-link.github {
-  background: linear-gradient(135deg, #6b88ff 0%, #6a00ff 100%);
+  background: #6b4234;
+}
+.support-link.github:hover {
+  background: #b37400;
 }
 
 .support-link.support {
-  background: linear-gradient(135deg, #ff6584 0%, #cf43ff 100%);
+  background: #7c546d;
+}
+.support-link.support:hover {
+  background: #8d1d55;
 }
 
 .support-link.donate {
-  background: linear-gradient(135deg, #58c6ff 0%, #0464ff 100%);
+  background: #494e50;
+}
+.support-link.donate:hover {
+  background: #033d9a;
 }
 
 .support-link:hover {
   transform: translateY(-3px);
   filter: saturate(1.05);
   box-shadow: 0 16px 32px -20px rgba(31, 12, 60, 0.55);
+  color: #fff;
 }
 
 @media (max-width: 900px) {
