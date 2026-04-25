@@ -272,7 +272,7 @@ a:hover {
 
 .product-card {
   position: relative;
-  padding: clamp(1.8rem, 3vw, 2.3rem);
+  padding: clamp(1.8rem, 3vw, 2.1rem);
   background: rgba(255, 255, 255, 0.75);
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.6);
@@ -315,9 +315,10 @@ a:hover {
 
 .product-card h2 {
   font-family: "Arial", sans-serif;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0;
   position: relative;
   color: black;
+  line-height: 1;
   /* margin: 0;
   display: flex;
   gap: 0.6rem;
@@ -364,9 +365,6 @@ a:hover {
 }
 
 .leo-32 {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
   vertical-align: bottom;
 }
 
@@ -385,7 +383,7 @@ a:hover {
 .integ-logo {
   color: #9f4321;
   font-weight: 700;
-  margin-left: 0.15rem;
+  /* margin-left: 0.15rem; */
 }
 
 .subtitle {
@@ -399,6 +397,7 @@ a:hover {
 
   color: #6b8a99;
   font-family: Tahoma, sans-serif;
+  font-style: italic;
   font-size: 23px;
   font-weight: 600;
   text-shadow: 1px 1px 0px #ffffff;
