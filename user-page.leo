@@ -13,7 +13,7 @@
 <v t="felix.20210717232712.1"><vh>@clean style.css</vh></v>
 </vnodes>
 <tnodes>
-<t tx="felix.20210717232432.2" _mod_time="46313736303834343831302e3437390a2e">@language html
+<t tx="felix.20210717232432.2" _mod_time="46313737373137383831362e3130340a2e">@language html
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 
@@ -21,16 +21,16 @@
 
 &lt;/html&gt;
 </t>
-<t tx="felix.20210717232712.1" _mod_time="46313736303834343831302e3530370a2e">@language css
+<t tx="felix.20210717232712.1" _mod_time="46313737373136333332332e3737380a2e">@language css
 :root {
   --font-body: "Inter", "Segoe UI", sans-serif;
-  --font-heading: "Source Serif 4", "Georgia", serif;
+  --font-heading: "Courier New", Courier, monospace;
   --color-page: #f9f5f2;
   --color-text: #201920;
   --color-muted: #645360;
-  --color-accent: #ff7a18;
-  --color-accent-strong: #ff3d81;
-  --color-surface: rgba(255, 255, 255, 0.78);
+  --color-accent: #ce6418;
+  --color-accent-strong: #9f4217;
+  --color-surface: rgba(255, 255, 255, 0.04);
   --color-border: rgba(255, 255, 255, 0.58);
   --shadow-soft: 0 25px 60px -30px rgba(33, 15, 60, 0.35);
   --shadow-hover: 0 32px 70px -28px rgba(33, 15, 60, 0.45);
@@ -54,33 +54,48 @@ body {
   margin: 0;
   font-family: var(--font-body);
   color: var(--color-text);
-  background:
-    linear-gradient(135deg, rgba(255, 240, 223, 0.82) 0%, rgba(239, 233, 255, 0.65) 50%, rgba(224, 246, 255, 0.75) 100%),
-    url("background.jpg") bottom right / 620px auto no-repeat fixed,
-    var(--color-page);
   display: flex;
   justify-content: center;
   padding: 0;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  background-color: #f7f7f7;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-image: url(background.jpg);
+  background-attachment: fixed;
+  background-size: contain;
 }
 
-body::before {
-  content: "";
+canvas {
+  display: none;
   position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(circle at top right, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0) 45%),
-    radial-gradient(circle at 20% 20%, rgba(255, 125, 92, 0.22) 0%, rgba(255, 125, 92, 0) 55%);
+  inset: 0; /* shorthand for top/right/bottom/left: 0 */
+  width: 100vw;
+  height: 100vh; /* Fallback for browsers that don't support dvh */
+  height: 100dvh;
+  background: #fff;
+  z-index: -1;
   pointer-events: none;
-  z-index: 0;
+  opacity: 0.25;
+}
+
+body.webgl-ready {
+  background-image: none;
+}
+
+body.webgl-ready canvas {
+  display: block;
+  background: #fff;
 }
 
 a {
   color: var(--color-accent);
   text-decoration: underline;
   text-decoration-color: rgba(255, 122, 24, 0.35);
-  transition: color 0.2s ease, text-decoration-color 0.2s ease;
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
 }
 
 a:hover {
@@ -93,7 +108,8 @@ a:hover {
   z-index: 1;
   width: min(100%, 1100px);
   margin: 0 auto;
-  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem) clamp(4rem, 7vw, 6rem);
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem)
+    clamp(4rem, 7vw, 6rem);
   display: flex;
   flex-direction: column;
   gap: clamp(2rem, 5vw, 3.5rem);
@@ -101,10 +117,10 @@ a:hover {
 
 .glass {
   background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  border: 2px solid var(--color-border);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(18px);
+  backdrop-filter: blur(8px);
   padding: clamp(2rem, 5vw, 3rem);
   overflow: hidden;
   position: relative;
@@ -114,7 +130,11 @@ a:hover {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(120deg, rgba(255, 255, 255, 0.22) 0%, rgba(255, 255, 255, 0) 45%);
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0) 45%
+  );
   pointer-events: none;
 }
 
@@ -138,20 +158,23 @@ a:hover {
 .blended {
   width: clamp(190px, 26vw, 240px);
   height: clamp(190px, 26vw, 240px);
-  border-radius: 32px;
-  border: 6px solid rgba(255, 255, 255, 0.8);
+  border-radius: 50%;
+  border: 6px solid rgba(255, 255, 255, 1);
   box-shadow: 0 18px 40px -22px rgba(31, 12, 60, 0.45);
   background-image: url(/felix-160px.jpg);
   background-position: center;
   background-size: cover;
-  background-color: rgba(255, 234, 223, 0.9);
+  background-color: rgba(142, 124, 114, 0.146);
   background-blend-mode: soft-light;
-  transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+  transition:
+    transform 0.4s ease,
+    background-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-.blended:hover {
+.hero:hover .blended {
   transform: translateY(-6px) scale(1.02);
-  background-color: rgba(255, 255, 255, 0.95);
+  background-color: rgba(120, 111, 99, 0.05);
   box-shadow: 0 24px 55px -26px rgba(31, 12, 60, 0.55);
 }
 
@@ -172,6 +195,7 @@ a:hover {
 .main-title {
   margin: 0;
   font-family: var(--font-heading);
+
   font-size: clamp(2.8rem, 4vw, 3.6rem);
   line-height: 1.1;
   color: var(--color-text);
@@ -191,7 +215,14 @@ a:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
-  margin-top: 0.5rem;
+}
+
+.product-section:hover .slogan {
+  color: #68490b;
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
+  font-size: 1.03rem;
 }
 
 .cta-button {
@@ -203,7 +234,13 @@ a:hover {
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.02em;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+  transition:
+    transform 0.13s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease,
+    filter 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
   border: 1px solid transparent;
 }
 
@@ -213,9 +250,18 @@ a:hover {
   box-shadow: 0 18px 32px -20px rgba(255, 122, 24, 0.55);
 }
 
+.cta-button.primary img {
+  filter: grayscale(33%);
+}
 .cta-button.primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 20px 36px -18px rgba(255, 122, 24, 0.6);
+  color: black;
+  filter: brightness(1.18) saturate(1.3);
+}
+
+.cta-button.primary:hover img {
+  filter: grayscale(23%);
 }
 
 .cta-button.outline {
@@ -241,7 +287,23 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
-  margin-bottom: clamp(1.2rem, 3vw, 1.8rem);
+  margin-bottom: clamp(0.2rem, 3vw, 0.7rem);
+}
+
+.support-message {
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.support-section:hover .support-message {
+  color: #393537;
+}
+.support-section:hover .support-message a {
+  color: #b65500;
+}
+.support-section:hover .support-message {
+  font-size: 1.02rem;
 }
 
 .section-heading h2 {
@@ -266,7 +328,7 @@ a:hover {
 
 .product-card {
   position: relative;
-  padding: clamp(1.8rem, 3vw, 2.3rem);
+  padding: clamp(1.8rem, 3vw, 2.1rem);
   background: rgba(255, 255, 255, 0.75);
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.6);
@@ -276,18 +338,24 @@ a:hover {
   display: flex;
   flex-direction: column;
   gap: 0.9rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
   overflow: hidden;
 }
 
 .product-card::after {
-  content: '→';
+  content: "→";
   position: absolute;
   right: 24px;
-  bottom: 20px;
+  bottom: 26px;
   font-size: 1.4rem;
   color: rgba(32, 28, 31, 0.25);
-  transition: transform 0.2s ease, color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
 }
 
 .product-card:hover {
@@ -296,19 +364,22 @@ a:hover {
   border-color: rgba(255, 255, 255, 0.85);
 }
 
+.product-card:hover .more-info {
+  font-size: 1.05rem;
+}
+
 .product-card:hover::after {
   transform: translateX(6px);
   color: var(--color-accent);
 }
 
 .product-card h2 {
-  margin: 0;
-  display: flex;
-  gap: 0.6rem;
-  align-items: center;
-  font-family: var(--font-heading);
-  font-size: 1.65rem;
-  line-height: 1.3;
+  margin-top: 6px;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 0;
+  position: relative;
+  color: black;
+  line-height: 1;
 }
 
 .product-card p {
@@ -322,7 +393,11 @@ a:hover {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--color-accent);
-  transition: color 0.2s ease, transform 0.2s ease;
+  font-style: italic;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease,
+    font-size 0.2s ease;
 }
 
 .product-card:hover .more-info {
@@ -331,42 +406,50 @@ a:hover {
 }
 
 .column-leojs {
-  background: linear-gradient(135deg, rgba(255, 252, 243, 0.9) 0%, rgba(255, 235, 217, 0.8) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(255, 252, 243, 0.9) 0%,
+    rgba(255, 235, 217, 0.8) 100%
+  );
 }
 
 .column-leointeg {
-  background: linear-gradient(135deg, rgba(249, 245, 255, 0.92) 0%, rgba(237, 227, 255, 0.82) 100%);
+  background: linear-gradient(
+    135deg,
+    rgba(249, 245, 255, 0.92) 0%,
+    rgb(255 234 227 / 82%) 100%
+  );
+}
+
+.slogan {
+  text-align: center;
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
 }
 
 .leo-32 {
-  width: 32px;
-  height: 32px;
-  flex-shrink: 0;
+  vertical-align: bottom;
 }
 
 .js-logo {
   background-color: #f7e018;
-  padding: 0.1rem 0.4rem;
-  border-radius: 0.35rem;
-  color: #201c1f;
-  margin-left: 0.15rem;
-  font-weight: 700;
+  padding-right: 9px;
+  padding-top: 9px;
 }
 
 .integ-logo {
   color: #9f4321;
   font-weight: 700;
-  margin-left: 0.15rem;
 }
 
 .subtitle {
-  display: block;
-  font-size: 0.95rem;
-  font-family: var(--font-body);
-  font-weight: 600;
   color: #6b8a99;
-  text-shadow: none;
-  letter-spacing: 0.03em;
+  font-family: Tahoma, sans-serif;
+  font-style: italic;
+  font-size: 23px;
+  font-weight: 600;
+  text-shadow: 1px 1px 0px #ffffff;
 }
 
 .badge-new {
@@ -448,26 +531,40 @@ a:hover {
   font-weight: 600;
   text-decoration: none;
   color: #fff;
-  transition: transform 0.18s ease, box-shadow 0.18s ease, filter 0.18s ease;
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease;
   box-shadow: 0 12px 28px -18px rgba(31, 12, 60, 0.5);
 }
 
 .support-link.github {
-  background: linear-gradient(135deg, #6b88ff 0%, #6a00ff 100%);
+  background: #6b4234;
+}
+.support-link.github:hover {
+  background: #b37400;
 }
 
 .support-link.support {
-  background: linear-gradient(135deg, #ff6584 0%, #cf43ff 100%);
+  background: #7c546d;
+}
+.support-link.support:hover {
+  background: #8d1d55;
 }
 
 .support-link.donate {
-  background: linear-gradient(135deg, #58c6ff 0%, #0464ff 100%);
+  background: #494e50;
+}
+.support-link.donate:hover {
+  background: #033d9a;
 }
 
 .support-link:hover {
   transform: translateY(-3px);
   filter: saturate(1.05);
   box-shadow: 0 16px 32px -20px rgba(31, 12, 60, 0.55);
+  color: #fff;
 }
 
 @media (max-width: 900px) {
@@ -500,7 +597,8 @@ a:hover {
   }
 
   .page {
-    padding: clamp(2.5rem, 7vw, 3.5rem) clamp(1rem, 6vw, 2rem) clamp(3rem, 8vw, 4rem);
+    padding: clamp(2.5rem, 7vw, 3.5rem) clamp(1rem, 6vw, 2rem)
+      clamp(3rem, 8vw, 4rem);
     gap: 2.5rem;
   }
 
@@ -524,7 +622,6 @@ a:hover {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
   *,
   *::before,
   *::after {
@@ -563,6 +660,7 @@ a:hover {
 
 </t>
 <t tx="fil.20210718013948.1">&lt;body&gt;
+  &lt;canvas id="gl-canvas" aria-label="WebGL cube array demo"&gt;&lt;/canvas&gt;
   &lt;main class="page"&gt;
     &lt;header class="hero glass"&gt;
       &lt;div class="hero-layout"&gt;
@@ -570,53 +668,60 @@ a:hover {
           &lt;div class="photo blended" role="img" aria-label="Portrait of Félix"&gt;&lt;/div&gt;
         &lt;/div&gt;
         &lt;div class="hero-content"&gt;
-          &lt;span class="eyebrow"&gt;Programmer · Musician · Designer&lt;/span&gt;
+
           &lt;h1 class="main-title"&gt;Hello World&lt;/h1&gt;
-          &lt;p class="intro"&gt;I'm Félix, a programmer, musician, and graphic designer based in Montréal.&lt;/p&gt;
-          &lt;p class="intro highlight-links"&gt;I'm the creator of
+
+          &lt;p class="intro highlight-links"&gt;
+            I'm Félix, the creator of &lt;a target="_blank" title="Leo-Web on GitHub"
+              href="https://github.com/boltex/leo-web"&gt;Leo-Web&lt;/a&gt;, a browser-based implementation of Leo Editor that
+            runs directly on the web.
+          &lt;/p&gt;
+
+          &lt;div class="hero-buttons"&gt;
+            &lt;a class="cta-button primary" title="Open Leo-Web" href="https://boltex.github.io/leo-web/" target="_blank"
+              rel="noopener noreferrer"&gt;👉🏻 Open Leo-Web&lt;/a&gt;
+          &lt;/div&gt;
+
+          &lt;p class="intro highlight-links"&gt;
+            I'm also the author of
             &lt;a target="_blank" title="Find out more about LeoJS" href="https://boltex.github.io/leojs/"&gt;LeoJS&lt;/a&gt;
             and
             &lt;a target="_blank" title="Find out more about LeoInteg"
               href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"&gt;LeoInteg&lt;/a&gt;,
-            the
-            &lt;a target="_blank" title="Leo’s Home Page"
-              href="https://leo-editor.github.io/leo-editor/"&gt;Leo&amp;nbsp;Editor&lt;/a&gt;
-            extensions for
-            &lt;a target="_blank" title="Visual Studio Code" href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt;
-            and
-            &lt;a target="_blank" title="Open Source Software Binaries of VS Code"
-              href="https://vscodium.com//"&gt;VSCodium&lt;/a&gt;.
+            the Leo Editor extensions for VS Code and VSCodium.
           &lt;/p&gt;
-          &lt;div class="hero-buttons"&gt;
-            &lt;a class="cta-button primary" title="Watch the Intro to Leo video"
-              href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank" rel="noopener noreferrer"&gt;📺 Intro to
-              Leo&lt;/a&gt;
-            &lt;a class="cta-button outline" title="Watch the LeoJS Features Demo video"
-              href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank" rel="noopener noreferrer"&gt;📺 LeoJS
-              Features Demo&lt;/a&gt;
-          &lt;/div&gt;
-          &lt;p class="video-note"&gt;&lt;em&gt;New to Leo or outline editors?&lt;/em&gt; Dive into the Intro to Leo video to get started.
-            For a fast-track on LeoJS's capabilities or to see it in action within VSCode for the web, check out the
-            LeoJS Features Demo.&lt;/p&gt;
+
         &lt;/div&gt;
       &lt;/div&gt;
     &lt;/header&gt;
 
     &lt;section class="product-section glass"&gt;
       &lt;div class="section-heading"&gt;
-        &lt;h2&gt;Build with Leo&lt;/h2&gt;
-        &lt;p&gt;Explore polished tools that bring Leo’s outlining power to modern editors.&lt;/p&gt;
+        &lt;h2&gt;Leo Editor Integration Extensions&lt;/h2&gt;
+
+        &lt;div class="hero-buttons"&gt;
+          &lt;a class="cta-button primary" title="Watch the Intro to Leo video"
+            href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank" rel="noopener noreferrer"&gt;&lt;img
+              src="/youtube.png" alt="Intro to Leo"&gt; Intro to
+            Leo&lt;/a&gt;
+          &lt;a class="cta-button primary" title="Watch the LeoJS Features Demo video"
+            href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank" rel="noopener noreferrer"&gt;&lt;img
+              src="/youtube.png" alt="Intro to Leo"&gt; LeoJS
+            Features Demo&lt;/a&gt;
+        &lt;/div&gt;
+
+        &lt;p class="slogan"&gt;Leo’s outliner and scripting environment, integrated into VS Code and VSCodium.&lt;/p&gt;
       &lt;/div&gt;
       &lt;div class="product-grid"&gt;
         &lt;a class="column-link column-leojs product-card" href="https://boltex.github.io/leojs/" target="_blank"
           title="Find out more about LeoJS"&gt;
-          &lt;div class="badge-new"&gt;NEW&lt;/div&gt;
+          &lt;!-- &lt;div class="badge-new"&gt;NEW&lt;/div&gt; --&gt;
           &lt;h2&gt;&lt;img class="leo-32" src="/leojs32px.png" alt="LeoJS"&gt; Leo&lt;span class="js-logo"&gt;JS&lt;/span&gt;
             &lt;span class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;
           &lt;/h2&gt;
           &lt;p&gt;A &lt;strong&gt;TypeScript implementation of the Leo&amp;nbsp;Editor&lt;/strong&gt;, scriptable in JavaScript and
             TypeScript. LeoJS can also be used in a browser with VSCode for the web.&lt;/p&gt;
-          &lt;span class="more-info"&gt;See what’s new in LeoJS&lt;/span&gt;
+          &lt;span class="more-info"&gt;Find out more about LeoJS...&lt;/span&gt;
         &lt;/a&gt;
 
         &lt;a class="column-link column-leointeg product-card"
@@ -627,23 +732,17 @@ a:hover {
           &lt;/h2&gt;
           &lt;p&gt;The &lt;strong&gt;original Python Leo&amp;nbsp;Editor integrated into VSCode&lt;/strong&gt;. All features are mapped to UI
             controls, and their original keyboard shortcuts.&lt;/p&gt;
-          &lt;span class="more-info"&gt;Discover LeoInteg workflows&lt;/span&gt;
+          &lt;span class="more-info"&gt;Find out more about LeoInteg...&lt;/span&gt;
         &lt;/a&gt;
       &lt;/div&gt;
     &lt;/section&gt;
 
-    &lt;section class="highlight glass"&gt;
-      &lt;div class="highlight-content"&gt;
-        &lt;h2&gt;Leo Editor Integration Extensions&lt;/h2&gt;
-        &lt;p&gt;Bring the legendary outliner into your day-to-day with iterative workflows, intuitive UI, and native
-          cross-platform support.&lt;/p&gt;
-      &lt;/div&gt;
-    &lt;/section&gt;
-
     &lt;section class="support-section glass"&gt;
-      &lt;h2&gt;Support the Work&lt;/h2&gt;
-      &lt;p&gt;If you’d like to help fuel new features, tutorials, and community updates, your support makes a real
-        difference.&lt;/p&gt;
+      &lt;h2&gt;Support Ongoing Development&lt;/h2&gt;
+      &lt;p class="support-message"&gt;If you’d like to contribute, &lt;a
+          href="https://github.com/boltex?tab=repositories&amp;q=&amp;type=&amp;language=&amp;sort=stargazers" target="_blank"
+          rel="noopener noreferrer"&gt;starring my projects on GitHub&lt;/a&gt; is a free way to help, and sponsorship directly
+        supports ongoing development.&lt;/p&gt;
       &lt;div class="support-grid"&gt;
         &lt;a class="support-link github" title="Support Félix on GitHub" target="_blank"
           href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
@@ -654,6 +753,8 @@ a:hover {
       &lt;/div&gt;
     &lt;/section&gt;
   &lt;/main&gt;
+  &lt;script type="module" src="./src/main.js"&gt;&lt;/script&gt;
+
 &lt;/body&gt;
 </t>
 </tnodes>
