@@ -16,87 +16,115 @@
     gtag('js', new Date());
     gtag('config', 'G-6YLK1QW8SS');
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@600&display=swap"
+    rel="stylesheet">
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="190x190" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="manifest" href="/site.webmanifest">
-  <link rel="stylesheet" href="style.css?v=1.1">
+  <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 
 <body>
+  <canvas id="gl-canvas" aria-label="WebGL cube array demo"></canvas>
+  <main class="page">
+    <header class="hero glass">
+      <div class="hero-layout">
+        <div class="portrait">
+          <div class="photo blended" role="img" aria-label="Portrait of Félix"></div>
+        </div>
+        <div class="hero-content">
 
-  <div class="photo blended"  alt="Félix"></div>
+          <h1 class="main-title">Hello World</h1>
 
-  <h1 class="main-title">Hello World</h1>
+          <p class="intro highlight-links">
+            I'm Félix, the creator of <a target="_blank" title="Leo-Web on GitHub"
+              href="https://github.com/boltex/leo-web">Leo-Web</a>, a browser-based implementation of Leo Editor that
+            runs directly on the web.
+          </p>
 
-  <p>I'm Félix, a programmer, musician, and graphic designer based in Montréal.</p>
+          <div class="hero-buttons">
+            <a class="cta-button primary" title="Open Leo-Web" href="https://boltex.github.io/leo-web/" target="_blank"
+              rel="noopener noreferrer">👉🏻 Open Leo-Web</a>
+          </div>
 
-  <p class="last bold-anchor">I'm the creator of
-    <a target="_blank" title="Find out more about LeoJS" href="https://boltex.github.io/leojs/">LeoJS</a>
-    and
-    <a target="_blank" title="Find out more about LeoInteg"
-      href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code">LeoInteg</a>,
-    the
-    <a target="_blank" title="Leo’s Home Page" href="https://leo-editor.github.io/leo-editor/">Leo&nbsp;Editor</a>
-    extensions for
-    <a target="_blank" title="Visual Studio Code" href="https://code.visualstudio.com/">VSCode</a>
-    and
-    <a target="_blank" title="Open Source Software Binaries of VS Code" href="https://vscodium.com//">VSCodium</a>.
-  </p>
-  <p class="video-anchor"><em>New to Leo or outline editors?</em> Dive into the 📺&nbsp;<a title="Introduction to LeoJS"
-      href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank"
-      rel="noopener noreferrer">Intro&nbsp;to&nbsp;Leo</a>
-    video to get started.
-  </p>
-  <p class="video-anchor">
-    For a fast-track on LeoJS's capabilities or to see it in action within VSCode for the web,
-    check out the 📺&nbsp;<a title="LeoJS Features Demo" href="https://www.youtube.com/watch?v=M_mKXSbVGdE"
-      target="_blank" rel="noopener noreferrer">LeoJS&nbsp;Features&nbsp;Demo</a>.
-  </p>
+          <p class="intro highlight-links">
+            I'm also the author of
+            <a target="_blank" title="Find out more about LeoJS" href="https://boltex.github.io/leojs/">LeoJS</a>
+            and
+            <a target="_blank" title="Find out more about LeoInteg"
+              href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code">LeoInteg</a>,
+            the Leo Editor extensions for VS Code and VSCodium.
+          </p>
 
-  <div class="top-row">
+        </div>
+      </div>
+    </header>
 
-    <a class="column-link column-leojs" href="https://boltex.github.io/leojs/" target="_blank"
-      title="Find out more about LeoJS">
-      <div class="badge-new">NEW</div>
-      <h2><img class="leo-32" src="/leojs32px.png" alt="LeoJS"> Leo<span class="js-logo">JS</span> <span
-          class="subtitle">VSCode&nbsp;Extension</span></h2>
-      <p>A <strong>TypeScript implementation of the Leo&nbsp;Editor</strong>, scriptable in
-        JavaScript and TypeScript. LeoJS can also be used in a browser with VSCode for the web.</p>
-      <p class="more-info">Find out more about LeoJS...</p>
-    </a>
+    <section class="product-section glass">
+      <div class="section-heading">
+        <h2>Leo Editor Integration Extensions</h2>
 
-    <a class="column-link column-leointeg" href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"
-      target="_blank" title="Find out more about LeoInteg">
-      <h2><img class="leo-32" src="/leointeg32px.png" alt="LeoJS"> Leo<span class="integ-logo">Integ</span> <span
-          class="subtitle">VSCode&nbsp;Extension</span></h2>
-      <p>The <strong>original Python Leo&nbsp;Editor integrated into VSCode</strong>. All features are mapped to UI
-        controls, and their original keyboard shortcuts.</p>
-      <p class="more-info">Find out more about LeoInteg...</p>
-    </a>
-  </div>
+        <div class="hero-buttons">
+          <a class="cta-button primary" title="Watch the Intro to Leo video"
+            href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank" rel="noopener noreferrer"><img
+              src="/youtube.png" alt="Intro to Leo"> Intro to
+            Leo</a>
+          <a class="cta-button primary" title="Watch the LeoJS Features Demo video"
+            href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank" rel="noopener noreferrer"><img
+              src="/youtube.png" alt="Intro to Leo"> LeoJS
+            Features Demo</a>
+        </div>
 
-  <div class="controls">
-    <div class="leointeg noselect">
-      <h1>Leo&nbsp;Editor</h1>
-      <h2>Integration Extensions</h2>
-      <div class="bottom-border"> </div>
-    </div>
-    <div class="github noselect">
-      <a title="Support Félix on GitHub" target="_blank" href="https://github.com/sponsors/boltex">🤍 Sponsor on
-        GitHub</a>
-    </div>
-    <div class="support noselect">
-      <a title="Support Félix on Patreon" target="_blank" href="https://www.patreon.com/felixgraphx">🤍 Sponsor via
-        Patreon</a>
-    </div>
-    <div class="donate noselect">
-      <a title="Support Félix on Paypal" target="_blank"
-        href="https://www.paypal.com/donate/?hosted_button_id=3JWX5TH5FL9TL">🤍 Donate via Paypal</a>
-    </div>
-  </div>
-  <div class="buffer">&nbsp;</div>
+        <p class="slogan">Leo’s outliner and scripting environment, integrated into VS Code and VSCodium.</p>
+      </div>
+      <div class="product-grid">
+        <a class="column-link column-leojs product-card" href="https://boltex.github.io/leojs/" target="_blank"
+          title="Find out more about LeoJS">
+          <!-- <div class="badge-new">NEW</div> -->
+          <h2><img class="leo-32" src="/leojs32px.png" alt="LeoJS"> Leo<span class="js-logo">JS</span>
+            <span class="subtitle">VSCode&nbsp;Extension</span>
+          </h2>
+          <p>A <strong>TypeScript implementation of the Leo&nbsp;Editor</strong>, scriptable in JavaScript and
+            TypeScript. LeoJS can also be used in a browser with VSCode for the web.</p>
+          <span class="more-info">Find out more about LeoJS...</span>
+        </a>
+
+        <a class="column-link column-leointeg product-card"
+          href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code" target="_blank"
+          title="Find out more about LeoInteg">
+          <h2><img class="leo-32" src="/leointeg32px.png" alt="LeoInteg"> Leo<span class="integ-logo">Integ</span>
+            <span class="subtitle">VSCode&nbsp;Extension</span>
+          </h2>
+          <p>The <strong>original Python Leo&nbsp;Editor integrated into VSCode</strong>. All features are mapped to UI
+            controls, and their original keyboard shortcuts.</p>
+          <span class="more-info">Find out more about LeoInteg...</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="support-section glass">
+      <h2>Support Ongoing Development</h2>
+      <p class="support-message">If you’d like to contribute, <a
+          href="https://github.com/boltex?tab=repositories&q=&type=&language=&sort=stargazers" target="_blank"
+          rel="noopener noreferrer">starring my projects on GitHub</a> is a free way to help, and sponsorship directly
+        supports ongoing development.</p>
+      <div class="support-grid">
+        <a class="support-link github" title="Support Félix on GitHub" target="_blank"
+          href="https://github.com/sponsors/boltex">🤍 Sponsor on GitHub</a>
+        <a class="support-link support" title="Support Félix on Patreon" target="_blank"
+          href="https://www.patreon.com/felixgraphx">🤍 Sponsor via Patreon</a>
+        <a class="support-link donate" title="Support Félix on Paypal" target="_blank"
+          href="https://www.paypal.com/donate/?hosted_button_id=3JWX5TH5FL9TL">🤍 Donate via Paypal</a>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+
 </body>
 
 </html>

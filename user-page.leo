@@ -13,7 +13,7 @@
 <v t="felix.20210717232712.1"><vh>@clean style.css</vh></v>
 </vnodes>
 <tnodes>
-<t tx="felix.20210717232432.2">@language html
+<t tx="felix.20210717232432.2" _mod_time="46313737373137383831362e3130340a2e">@language html
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 
@@ -21,523 +21,612 @@
 
 &lt;/html&gt;
 </t>
-<t tx="felix.20210717232712.1">@language css
+<t tx="felix.20210717232712.1" _mod_time="46313737373136333332332e3737380a2e">@language css
+:root {
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-heading: "Courier New", Courier, monospace;
+  --color-page: #f9f5f2;
+  --color-text: #201920;
+  --color-muted: #645360;
+  --color-accent: #ce6418;
+  --color-accent-strong: #9f4217;
+  --color-surface: rgba(255, 255, 255, 0.04);
+  --color-border: rgba(255, 255, 255, 0.58);
+  --shadow-soft: 0 25px 60px -30px rgba(33, 15, 60, 0.35);
+  --shadow-hover: 0 32px 70px -28px rgba(33, 15, 60, 0.45);
+  --radius-xl: 28px;
+  --radius-lg: 22px;
+  --radius-pill: 999px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 html {
-  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
   background-color: #f7f7f7;
   background-repeat: no-repeat;
   background-position: bottom right;
-  background-image: url("background.jpg");
+  background-image: url(background.jpg);
   background-attachment: fixed;
   background-size: contain;
 }
 
-html,
-body {
-  overflow: -moz-scrollbars-none;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+canvas {
+  display: none;
+  position: fixed;
+  inset: 0; /* shorthand for top/right/bottom/left: 0 */
+  width: 100vw;
+  height: 100vh; /* Fallback for browsers that don't support dvh */
+  height: 100dvh;
+  background: #fff;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.25;
 }
 
-::-webkit-scrollbar {
-  display: none; /* Hide scrollbar in WebKit-based browsers */
+body.webgl-ready {
+  background-image: none;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-}
-
-.clear-both {
-  clear: both;
+body.webgl-ready canvas {
+  display: block;
+  background: #fff;
 }
 
 a {
-  color: rgb(65, 47, 65);
-  text-decoration-color: #baa8a8;
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 122, 24, 0.35);
+  transition:
+    color 0.2s ease,
+    text-decoration-color 0.2s ease;
 }
 
 a:hover {
-  color: rgb(158, 70, 3);
-  text-decoration: none;
+  color: var(--color-accent-strong);
+  text-decoration-color: var(--color-accent-strong);
 }
 
-p.bold-anchor a {
-  font-weight: bold;
+.page {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5rem) clamp(1.5rem, 5vw, 4rem)
+    clamp(4rem, 7vw, 6rem);
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 5vw, 3.5rem);
 }
 
-p.video-anchor a {
-  font-weight: bold;
-  color: #b14621;
-}
-p.video-anchor a:hover {
-  color: #790000;
-}
-
-h1 {
-  margin: 0rem 2rem 1rem 4rem;
-  font-size: 3rem;
-  font-family: "Courier New", Courier, monospace;
+.glass {
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(8px);
+  padding: clamp(2rem, 5vw, 3rem);
+  overflow: hidden;
+  position: relative;
 }
 
-.main-title {
-  margin: 1rem 2rem 1rem 4rem;
-  font-weight: 700;
+.glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    120deg,
+    rgba(255, 255, 255, 0.22) 0%,
+    rgba(255, 255, 255, 0) 45%
+  );
+  pointer-events: none;
 }
 
-p {
-  margin: 1rem 4rem;
-  font-size: 1rem;
-  font-family: "Trebuchet MS", Calibri, sans-serif;
+.hero {
+  padding: clamp(2.5rem, 5vw, 3.5rem);
+}
+
+.hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, clamp(220px, 28vw, 260px)) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: center;
+}
+
+.portrait {
+  display: flex;
+  justify-content: center;
 }
 
 .photo,
 .blended {
-  float: right;
-  margin-top: -0.5rem;
-  margin-right: 0.5rem;
+  width: clamp(190px, 26vw, 240px);
+  height: clamp(190px, 26vw, 240px);
   border-radius: 50%;
-  border: 8px solid white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  user-select: none;
-}
-
-.blended {
-  width: 160px;
-  height: 160px;
+  border: 6px solid rgba(255, 255, 255, 1);
+  box-shadow: 0 18px 40px -22px rgba(31, 12, 60, 0.45);
   background-image: url(/felix-160px.jpg);
-  background-color: rgb(255, 234, 223);
-  background-blend-mode: multiply;
-  transition: background-color 0.5s;
-}
-
-.blended:hover {
-  background-color: rgb(255, 255, 255);
-}
-
-.noselect {
-  /* iOS Safari */
-  -webkit-touch-callout: none;
-  /* Safari */
-  -webkit-user-select: none;
-  /* Konqueror HTML */
-  -khtml-user-select: none;
-  /* Old versions of Firefox */
-  -moz-user-select: none;
-  /* Internet Explorer/Edge */
-  -ms-user-select: none;
-  /* 
-  Non-prefixed version, currently
-  supported by Chrome, Edge, Opera and Firefox 
-  */
-  user-select: none;
-}
-
-.leo-img {
-  transition: 0.5s;
-  opacity: 0;
-  position: absolute;
-  top: -1rem;
-  left: 2.75rem;
-}
-/* 
-.controls:hover .leo-img {
-  opacity: 1;
-} */
-
-.github {
-  margin: 0.5rem 0 0 1.5rem;
-  background-color: #6b4234;
-  border-radius: 0.2rem;
-  display: inline-block;
-
-  border: 2px solid #8d6f38;
-  color: #ffffff;
-  font-size: 1rem;
-  padding: 0.2rem 1rem 0.2rem 0.75rem;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  transition: 0.3s;
-}
-
-.github:hover {
-  background-color: #b37400;
-  transform: scale(1.17);
-}
-
-.donate {
-  margin: 0.5rem 0 0 1.5rem;
-  background-color: #494e50;
-  border-radius: 0.2rem;
-  display: inline-block;
-
-  border: 2px solid #798283;
-  color: #ffffff;
-  font-size: 1rem;
-  padding: 0.2rem 1rem 0.2rem 0.75rem;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  transition: 0.3s;
-}
-
-.donate:hover {
-  background-color: #033d9a;
-  transform: scale(1.17);
-}
-
-.buffer {
-  clear: both;
-  margin: 0;
-  height: 1rem;
-  width: 2rem;
-  padding: 0.2rem 1rem;
-
-  float: right;
-}
-
-.support {
-  margin: 0.775rem 0 0 1.5rem;
-  display: inline-block;
-  background-color: #7c546d;
-  border-radius: 0.2rem;
-  border: 2px solid #b1899a;
-  color: #ffffff;
-  font-size: 1rem;
-  padding: 0.2rem 1rem 0.2rem 0.75rem;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  transition: 0.3s;
-}
-
-.support:hover {
-  background-color: #8d1d55;
-  transform: scale(1.17);
-}
-
-.vsix {
-  margin: 0.5rem 0 0 1.5rem;
-  display: inline-block;
-  background-color: #cc5d1a;
-  border: 2px solid #dda86c;
-  border-radius: 0.2rem;
-  color: #f2f2f2;
-  font-size: 1rem;
-  padding: 0.2rem 1rem 0.2rem 0.75rem;
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  transition: 0.3s;
-}
-
-.vsix:hover {
-  background-color: #a34b15;
-}
-
-.leojs {
-  background-color: #f08c05;
-  border-color: #9e7425;
-}
-
-.vsix.leojs:hover {
-  background-color: #ffa754;
-}
-
-.vsix a,
-.support a,
-.github a,
-.donate a {
-  color: #fff;
-  text-decoration-color: transparent;
-}
-
-.leointeg {
-  position: relative;
-  margin-top: 0rem;
-}
-
-.download-label {
-  margin: 0.5rem -2rem 0 2rem;
-  display: inline-block;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.leointeg h1 {
-  margin: 0rem 3rem 0 2rem;
-  padding-left: 8rem;
-  line-height: 5rem;
-  font-family: "Georgia", "Palatino Linotype", "Times New Roman", Times, serif;
-  font-size: 4.5rem;
-  color: #c9c9c9;
-  text-shadow: 0.02em 0.02em #636161aa, -0.02em -0.02em #fff;
-  text-align: right;
-  margin-bottom: 0;
-  font-weight: normal;
-}
-
-.leointeg h2 {
-  font-size: 1.75rem;
-  font-family: Arial, Helvetica, sans-serif;
-  font-weight: bold;
-  text-align: right;
-  margin: 0;
-  padding-top: 0.25rem;
-  padding-right: 4rem;
-  padding-bottom: 0.4rem;
-  background-color: #00000030;
-  color: white;
-  text-shadow: 0.05em 0.05em #1f1b1b40;
-}
-
-.leointeg .bottom-border {
-  /* min-height: 0.5rem; */
-  background: linear-gradient(90deg, #aa7336 0%, #d89c39 100%);
-}
-
-@media only screen and (max-width: 500px) {
-  .leointeg h1 {
-    margin-top: 0;
-    padding-left: 1.8rem;
-    margin-right: 0.5rem;
-    font-size: 3.5rem;
-  }
-}
-
-@media only screen and (max-width: 400px) {
-  a.column-link p {
-    margin-left: 0.2rem;
-    margin-right: 0.2rem;
-  }
-  h1 {
-    margin-top: 2rem;
-  }
-
-  p.last {
-    margin-bottom: 1rem;
-  }
-
-  .leointeg {
-    margin-top: 0rem;
-  }
-
-  .leointeg h1 {
-    margin-top: 0;
-    padding-left: 2.8rem;
-    margin-right: 1rem;
-    font-size: 2.5rem;
-  }
-
-  .leointeg h2 {
-    padding-right: 1rem;
-  }
-}
-
-@media only screen and (max-width: 275px) {
-  .leointeg h1 {
-    margin-top: 0;
-    padding-left: 0.8rem;
-    margin-right: 0.2rem;
-    font-size: 2.2rem;
-    margin-bottom: 0;
-  }
-}
-
-a.column-link {
-  max-width: 500px;
-  text-decoration: none;
-  color: #201c1f;
-  position: relative;
+  background-position: center;
   background-size: cover;
-  background-image: url("/banner-blur-narrow-trans.png");
-  background-repeat: no-repeat;
-  background-position: left 800px center;
-  transition: transform 0.1s ease-in-out, background-position 0.2s ease-in-out,
-    background-color 0.5s;
-  flex: 1;
-  margin: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  font-family: "Arial", sans-serif;
-  border-radius: 150% 100%;
+  background-color: rgba(142, 124, 114, 0.146);
+  background-blend-mode: soft-light;
+  transition:
+    transform 0.4s ease,
+    background-color 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
-a.column-link:hover {
-  color: #201c1f;
+.hero:hover .blended {
+  transform: translateY(-6px) scale(1.02);
+  background-color: rgba(120, 111, 99, 0.05);
+  box-shadow: 0 24px 55px -26px rgba(31, 12, 60, 0.55);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  color: var(--color-muted);
+}
+
+.main-title {
+  margin: 0;
+  font-family: var(--font-heading);
+
+  font-size: clamp(2.8rem, 4vw, 3.6rem);
+  line-height: 1.1;
+  color: var(--color-text);
+}
+
+.intro {
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.highlight-links a {
+  font-weight: 600;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.product-section:hover .slogan {
+  color: #68490b;
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
+  font-size: 1.03rem;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 1.35rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
   text-decoration: none;
-  background-position: left 0 center;
-  transform: scale(1.07);
-  background-color: #ffffff;
-  z-index: 2;
-  border: 9px solid #fff;
+  letter-spacing: 0.02em;
+  transition:
+    transform 0.13s ease,
+    box-shadow 0.18s ease,
+    background 0.18s ease,
+    filter 0.18s ease,
+    color 0.18s ease,
+    border-color 0.18s ease;
+  border: 1px solid transparent;
 }
 
-a.column-link:hover .more-info {
-  font-weight: bold;
-  color: rgb(151, 43, 0);
-  transform: scale(1.27);
+.cta-button.primary {
+  background: linear-gradient(135deg, #ff7a18 0%, #ffb347 100%);
+  color: #401101;
+  box-shadow: 0 18px 32px -20px rgba(255, 122, 24, 0.55);
 }
 
-a.column-link p {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
+.cta-button.primary img {
+  filter: grayscale(33%);
 }
-a.column-link h2 {
-  margin-bottom: 0.5rem;
+.cta-button.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 36px -18px rgba(255, 122, 24, 0.6);
+  color: black;
+  filter: brightness(1.18) saturate(1.3);
+}
+
+.cta-button.primary:hover img {
+  filter: grayscale(23%);
+}
+
+.cta-button.outline {
+  background: rgba(255, 255, 255, 0.2);
+  color: var(--color-text);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.35);
+}
+
+.cta-button.outline:hover {
+  background: rgba(255, 255, 255, 0.45);
+  transform: translateY(-2px);
+}
+
+.video-note {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-muted);
+}
+
+.section-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: clamp(0.2rem, 3vw, 0.7rem);
+}
+
+.support-message {
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
+.support-section:hover .support-message {
+  color: #393537;
+}
+.support-section:hover .support-message a {
+  color: #b65500;
+}
+.support-section:hover .support-message {
+  font-size: 1.02rem;
+}
+
+.section-heading h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3vw, 2.4rem);
+  color: var(--color-text);
+}
+
+.section-heading p {
+  margin: 0;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(1rem, 3vw, 1.8rem);
+}
+
+.product-card {
   position: relative;
+  padding: clamp(1.8rem, 3vw, 2.1rem);
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 18px 32px -26px rgba(31, 12, 60, 0.45);
+  text-decoration: none;
+  color: var(--color-text);
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.product-card::after {
+  content: "→";
+  position: absolute;
+  right: 24px;
+  bottom: 26px;
+  font-size: 1.4rem;
+  color: rgba(32, 28, 31, 0.25);
+  transition:
+    transform 0.2s ease,
+    color 0.2s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+  border-color: rgba(255, 255, 255, 0.85);
+}
+
+.product-card:hover .more-info {
+  font-size: 1.05rem;
+}
+
+.product-card:hover::after {
+  transform: translateX(6px);
+  color: var(--color-accent);
+}
+
+.product-card h2 {
+  margin-top: 6px;
+  font-family: "Arial", sans-serif;
+  margin-bottom: 0;
+  position: relative;
+  color: black;
+  line-height: 1;
+}
+
+.product-card p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--color-text);
+}
+
+.more-info {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  font-style: italic;
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease,
+    font-size 0.2s ease;
+}
+
+.product-card:hover .more-info {
+  color: var(--color-accent-strong);
+  transform: translateX(4px);
 }
 
 .column-leojs {
-  background-color: white;
-  border: 9px solid #f4f0cf;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 252, 243, 0.9) 0%,
+    rgba(255, 235, 217, 0.8) 100%
+  );
 }
+
 .column-leointeg {
-  background-color: white;
-  border: 9px solid #e8d5cd;
+  background: linear-gradient(
+    135deg,
+    rgba(249, 245, 255, 0.92) 0%,
+    rgb(255 234 227 / 82%) 100%
+  );
 }
+
+.slogan {
+  text-align: center;
+  transition:
+    color 0.3s ease,
+    font-size 0.3s ease;
+}
+
 .leo-32 {
   vertical-align: bottom;
 }
+
 .js-logo {
   background-color: #f7e018;
   padding-right: 9px;
   padding-top: 9px;
 }
+
 .integ-logo {
-  color: #8d3817;
+  color: #9f4321;
+  font-weight: 700;
 }
 
 .subtitle {
-  font-style: italic;
-  font-family: Tahoma, sans-serif;
   color: #6b8a99;
-  font-weight: 200;
   font-family: Tahoma, sans-serif;
+  font-style: italic;
   font-size: 23px;
   font-weight: 600;
   text-shadow: 1px 1px 0px #ffffff;
 }
 
-.top-row {
-  display: flex;
-  padding: 0 20px 0 20px;
-}
-
-.more-info {
-  font-style: italic;
-  padding: 0 !important;
-  margin: 0 !important;
-  color: #485c69;
-  text-align: center;
-  transition: transform 0.1s ease-in-out, color 0.1s linear;
-}
-
-p.video-links {
-  margin-bottom: -6px !important;
-}
-
-p.video-links a {
-  margin-right: 12px;
-}
-
-img.video {
-  position: relative;
-  opacity: 0.75;
-  width: 240px;
-  transition: transform 0.12s ease, opacity 0.1s linear;
-}
-
-img.video:hover {
-  opacity: 1;
-  z-index: 2;
-  transform: scale(1.2);
-}
-
 .badge-new {
   position: absolute;
-  background-color: red;
-  color: white;
-
-  right: 10%;
-  top: 6px;
-
-  height: 30px;
-  width: 30px;
-
-  padding: 4px 4px;
-  font-size: 15px;
-  line-height: 29px;
-  text-align: center;
+  top: 20px;
+  right: 18px;
+  background: linear-gradient(135deg, #ff3d81 0%, #ff7a18 100%);
+  color: #fff;
+  height: 42px;
+  width: 42px;
   border-radius: 50%;
-  transform: rotate(6deg);
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  border: 3px solid white;
+  display: grid;
+  place-items: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  transform: rotate(8deg);
+  box-shadow: 0 12px 24px -18px rgba(255, 61, 129, 0.7);
 }
 
-/* Responsive design */
-@media (max-width: 768px) {
-  .top-row {
-    flex-direction: column;
+.highlight {
+  text-align: center;
+}
+
+.highlight-content {
+  max-width: 640px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+
+.highlight-content h2 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 3vw, 2.2rem);
+}
+
+.highlight-content p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-muted);
+}
+
+.support-section {
+  text-align: center;
+}
+
+.support-section h2 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: clamp(1.9rem, 3vw, 2.3rem);
+}
+
+.support-section p {
+  margin: 0 auto clamp(1.4rem, 4vw, 2rem);
+  max-width: 600px;
+  color: var(--color-muted);
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.support-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.support-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.9rem 1.3rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  text-decoration: none;
+  color: #fff;
+  transition:
+    background 0.18s ease,
+    transform 0.18s ease,
+    box-shadow 0.18s ease,
+    filter 0.18s ease;
+  box-shadow: 0 12px 28px -18px rgba(31, 12, 60, 0.5);
+}
+
+.support-link.github {
+  background: #6b4234;
+}
+.support-link.github:hover {
+  background: #b37400;
+}
+
+.support-link.support {
+  background: #7c546d;
+}
+.support-link.support:hover {
+  background: #8d1d55;
+}
+
+.support-link.donate {
+  background: #494e50;
+}
+.support-link.donate:hover {
+  background: #033d9a;
+}
+
+.support-link:hover {
+  transform: translateY(-3px);
+  filter: saturate(1.05);
+  box-shadow: 0 16px 32px -20px rgba(31, 12, 60, 0.55);
+  color: #fff;
+}
+
+@media (max-width: 900px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .hero-content {
+    align-items: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .product-card {
+    padding: 2rem;
+  }
+
+  .product-card::after {
+    right: 18px;
+    bottom: 18px;
   }
 }
 
-@keyframes jiggle {
-  0% {
-    transform: translateX(0);
+@media (max-width: 640px) {
+  .glass {
+    padding: 2rem;
   }
-  25% {
-    transform: translateX(-5px);
+
+  .page {
+    padding: clamp(2.5rem, 7vw, 3.5rem) clamp(1rem, 6vw, 2rem)
+      clamp(3rem, 8vw, 4rem);
+    gap: 2.5rem;
   }
-  50% {
-    transform: translateX(5px);
+
+  .hero {
+    padding: 2rem;
   }
-  75% {
-    transform: translateX(-5px);
+
+  .photo,
+  .blended {
+    width: 180px;
+    height: 180px;
   }
-  100% {
-    transform: translateX(0);
+
+  .support-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .support-link {
+    width: 100%;
   }
 }
 
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-}
-
-@keyframes skew {
-  0%,
-  100% {
-    transform: skew(0deg, 0deg);
-  }
-  50% {
-    transform: skew(10deg, -5deg);
-  }
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.05);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-
-@keyframes skew-pulse {
-  0% {
-    transform: scale(1) skew(0deg, 0deg);
-  }
-  50% {
-    transform: scale(1.05) skew(10deg, -5deg);
-  }
-  100% {
-    transform: scale(1) skew(0deg, 0deg);
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
   }
 }
 </t>
@@ -556,88 +645,116 @@ img.video:hover {
     gtag('js', new Date());
     gtag('config', 'G-6YLK1QW8SS');
   &lt;/script&gt;
+  &lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+  &lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+  &lt;link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Source+Serif+4:wght@600&amp;display=swap"
+    rel="stylesheet"&gt;
   &lt;link rel="shortcut icon" href="/favicon.ico"&gt;
   &lt;link rel="apple-touch-icon" sizes="190x190" href="/apple-touch-icon.png"&gt;
   &lt;link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"&gt;
   &lt;link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"&gt;
   &lt;link rel="manifest" href="/site.webmanifest"&gt;
-  &lt;link rel="stylesheet" href="style.css?v=1.1"&gt;
+  &lt;link rel="stylesheet" href="style.css?v=2.0"&gt;
 &lt;/head&gt;
 
 </t>
 <t tx="fil.20210718013948.1">&lt;body&gt;
+  &lt;canvas id="gl-canvas" aria-label="WebGL cube array demo"&gt;&lt;/canvas&gt;
+  &lt;main class="page"&gt;
+    &lt;header class="hero glass"&gt;
+      &lt;div class="hero-layout"&gt;
+        &lt;div class="portrait"&gt;
+          &lt;div class="photo blended" role="img" aria-label="Portrait of Félix"&gt;&lt;/div&gt;
+        &lt;/div&gt;
+        &lt;div class="hero-content"&gt;
 
-  &lt;div class="photo blended"  alt="Félix"&gt;&lt;/div&gt;
+          &lt;h1 class="main-title"&gt;Hello World&lt;/h1&gt;
 
-  &lt;h1 class="main-title"&gt;Hello World&lt;/h1&gt;
+          &lt;p class="intro highlight-links"&gt;
+            I'm Félix, the creator of &lt;a target="_blank" title="Leo-Web on GitHub"
+              href="https://github.com/boltex/leo-web"&gt;Leo-Web&lt;/a&gt;, a browser-based implementation of Leo Editor that
+            runs directly on the web.
+          &lt;/p&gt;
 
-  &lt;p&gt;I'm Félix, a programmer, musician, and graphic designer based in Montréal.&lt;/p&gt;
+          &lt;div class="hero-buttons"&gt;
+            &lt;a class="cta-button primary" title="Open Leo-Web" href="https://boltex.github.io/leo-web/" target="_blank"
+              rel="noopener noreferrer"&gt;👉🏻 Open Leo-Web&lt;/a&gt;
+          &lt;/div&gt;
 
-  &lt;p class="last bold-anchor"&gt;I'm the creator of
-    &lt;a target="_blank" title="Find out more about LeoJS" href="https://boltex.github.io/leojs/"&gt;LeoJS&lt;/a&gt;
-    and
-    &lt;a target="_blank" title="Find out more about LeoInteg"
-      href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"&gt;LeoInteg&lt;/a&gt;,
-    the
-    &lt;a target="_blank" title="Leo’s Home Page" href="https://leo-editor.github.io/leo-editor/"&gt;Leo&amp;nbsp;Editor&lt;/a&gt;
-    extensions for
-    &lt;a target="_blank" title="Visual Studio Code" href="https://code.visualstudio.com/"&gt;VSCode&lt;/a&gt;
-    and
-    &lt;a target="_blank" title="Open Source Software Binaries of VS Code" href="https://vscodium.com//"&gt;VSCodium&lt;/a&gt;.
-  &lt;/p&gt;
-  &lt;p class="video-anchor"&gt;&lt;em&gt;New to Leo or outline editors?&lt;/em&gt; Dive into the 📺&amp;nbsp;&lt;a title="Introduction to LeoJS"
-      href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank"
-      rel="noopener noreferrer"&gt;Intro&amp;nbsp;to&amp;nbsp;Leo&lt;/a&gt;
-    video to get started.
-  &lt;/p&gt;
-  &lt;p class="video-anchor"&gt;
-    For a fast-track on LeoJS's capabilities or to see it in action within VSCode for the web,
-    check out the 📺&amp;nbsp;&lt;a title="LeoJS Features Demo" href="https://www.youtube.com/watch?v=M_mKXSbVGdE"
-      target="_blank" rel="noopener noreferrer"&gt;LeoJS&amp;nbsp;Features&amp;nbsp;Demo&lt;/a&gt;.
-  &lt;/p&gt;
+          &lt;p class="intro highlight-links"&gt;
+            I'm also the author of
+            &lt;a target="_blank" title="Find out more about LeoJS" href="https://boltex.github.io/leojs/"&gt;LeoJS&lt;/a&gt;
+            and
+            &lt;a target="_blank" title="Find out more about LeoInteg"
+              href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"&gt;LeoInteg&lt;/a&gt;,
+            the Leo Editor extensions for VS Code and VSCodium.
+          &lt;/p&gt;
 
-  &lt;div class="top-row"&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/header&gt;
 
-    &lt;a class="column-link column-leojs" href="https://boltex.github.io/leojs/" target="_blank"
-      title="Find out more about LeoJS"&gt;
-      &lt;div class="badge-new"&gt;NEW&lt;/div&gt;
-      &lt;h2&gt;&lt;img class="leo-32" src="/leojs32px.png" alt="LeoJS"&gt; Leo&lt;span class="js-logo"&gt;JS&lt;/span&gt; &lt;span
-          class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;&lt;/h2&gt;
-      &lt;p&gt;A &lt;strong&gt;TypeScript implementation of the Leo&amp;nbsp;Editor&lt;/strong&gt;, scriptable in
-        JavaScript and TypeScript. LeoJS can also be used in a browser with VSCode for the web.&lt;/p&gt;
-      &lt;p class="more-info"&gt;Find out more about LeoJS...&lt;/p&gt;
-    &lt;/a&gt;
+    &lt;section class="product-section glass"&gt;
+      &lt;div class="section-heading"&gt;
+        &lt;h2&gt;Leo Editor Integration Extensions&lt;/h2&gt;
 
-    &lt;a class="column-link column-leointeg" href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"
-      target="_blank" title="Find out more about LeoInteg"&gt;
-      &lt;h2&gt;&lt;img class="leo-32" src="/leointeg32px.png" alt="LeoJS"&gt; Leo&lt;span class="integ-logo"&gt;Integ&lt;/span&gt; &lt;span
-          class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;&lt;/h2&gt;
-      &lt;p&gt;The &lt;strong&gt;original Python Leo&amp;nbsp;Editor integrated into VSCode&lt;/strong&gt;. All features are mapped to UI
-        controls, and their original keyboard shortcuts.&lt;/p&gt;
-      &lt;p class="more-info"&gt;Find out more about LeoInteg...&lt;/p&gt;
-    &lt;/a&gt;
-  &lt;/div&gt;
+        &lt;div class="hero-buttons"&gt;
+          &lt;a class="cta-button primary" title="Watch the Intro to Leo video"
+            href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank" rel="noopener noreferrer"&gt;&lt;img
+              src="/youtube.png" alt="Intro to Leo"&gt; Intro to
+            Leo&lt;/a&gt;
+          &lt;a class="cta-button primary" title="Watch the LeoJS Features Demo video"
+            href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank" rel="noopener noreferrer"&gt;&lt;img
+              src="/youtube.png" alt="Intro to Leo"&gt; LeoJS
+            Features Demo&lt;/a&gt;
+        &lt;/div&gt;
 
-  &lt;div class="controls"&gt;
-    &lt;div class="leointeg noselect"&gt;
-      &lt;h1&gt;Leo&amp;nbsp;Editor&lt;/h1&gt;
-      &lt;h2&gt;Integration Extensions&lt;/h2&gt;
-      &lt;div class="bottom-border"&gt; &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="github noselect"&gt;
-      &lt;a title="Support Félix on GitHub" target="_blank" href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on
-        GitHub&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class="support noselect"&gt;
-      &lt;a title="Support Félix on Patreon" target="_blank" href="https://www.patreon.com/felixgraphx"&gt;🤍 Sponsor via
-        Patreon&lt;/a&gt;
-    &lt;/div&gt;
-    &lt;div class="donate noselect"&gt;
-      &lt;a title="Support Félix on Paypal" target="_blank"
-        href="https://www.paypal.com/donate/?hosted_button_id=3JWX5TH5FL9TL"&gt;🤍 Donate via Paypal&lt;/a&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="buffer"&gt;&amp;nbsp;&lt;/div&gt;
+        &lt;p class="slogan"&gt;Leo’s outliner and scripting environment, integrated into VS Code and VSCodium.&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class="product-grid"&gt;
+        &lt;a class="column-link column-leojs product-card" href="https://boltex.github.io/leojs/" target="_blank"
+          title="Find out more about LeoJS"&gt;
+          &lt;!-- &lt;div class="badge-new"&gt;NEW&lt;/div&gt; --&gt;
+          &lt;h2&gt;&lt;img class="leo-32" src="/leojs32px.png" alt="LeoJS"&gt; Leo&lt;span class="js-logo"&gt;JS&lt;/span&gt;
+            &lt;span class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;
+          &lt;/h2&gt;
+          &lt;p&gt;A &lt;strong&gt;TypeScript implementation of the Leo&amp;nbsp;Editor&lt;/strong&gt;, scriptable in JavaScript and
+            TypeScript. LeoJS can also be used in a browser with VSCode for the web.&lt;/p&gt;
+          &lt;span class="more-info"&gt;Find out more about LeoJS...&lt;/span&gt;
+        &lt;/a&gt;
+
+        &lt;a class="column-link column-leointeg product-card"
+          href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code" target="_blank"
+          title="Find out more about LeoInteg"&gt;
+          &lt;h2&gt;&lt;img class="leo-32" src="/leointeg32px.png" alt="LeoInteg"&gt; Leo&lt;span class="integ-logo"&gt;Integ&lt;/span&gt;
+            &lt;span class="subtitle"&gt;VSCode&amp;nbsp;Extension&lt;/span&gt;
+          &lt;/h2&gt;
+          &lt;p&gt;The &lt;strong&gt;original Python Leo&amp;nbsp;Editor integrated into VSCode&lt;/strong&gt;. All features are mapped to UI
+            controls, and their original keyboard shortcuts.&lt;/p&gt;
+          &lt;span class="more-info"&gt;Find out more about LeoInteg...&lt;/span&gt;
+        &lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+
+    &lt;section class="support-section glass"&gt;
+      &lt;h2&gt;Support Ongoing Development&lt;/h2&gt;
+      &lt;p class="support-message"&gt;If you’d like to contribute, &lt;a
+          href="https://github.com/boltex?tab=repositories&amp;q=&amp;type=&amp;language=&amp;sort=stargazers" target="_blank"
+          rel="noopener noreferrer"&gt;starring my projects on GitHub&lt;/a&gt; is a free way to help, and sponsorship directly
+        supports ongoing development.&lt;/p&gt;
+      &lt;div class="support-grid"&gt;
+        &lt;a class="support-link github" title="Support Félix on GitHub" target="_blank"
+          href="https://github.com/sponsors/boltex"&gt;🤍 Sponsor on GitHub&lt;/a&gt;
+        &lt;a class="support-link support" title="Support Félix on Patreon" target="_blank"
+          href="https://www.patreon.com/felixgraphx"&gt;🤍 Sponsor via Patreon&lt;/a&gt;
+        &lt;a class="support-link donate" title="Support Félix on Paypal" target="_blank"
+          href="https://www.paypal.com/donate/?hosted_button_id=3JWX5TH5FL9TL"&gt;🤍 Donate via Paypal&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/section&gt;
+  &lt;/main&gt;
+  &lt;script type="module" src="./src/main.js"&gt;&lt;/script&gt;
+
 &lt;/body&gt;
 </t>
 </tnodes>
