@@ -13,7 +13,7 @@
 <v t="felix.20210717232712.1"><vh>@clean style.css</vh></v>
 </vnodes>
 <tnodes>
-<t tx="felix.20210717232432.2" _mod_time="46313737373137383831362e3130340a2e">@language html
+<t tx="felix.20210717232432.2" _mod_time="46313737373432383331392e3039310a2e">@language html
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 
@@ -21,7 +21,7 @@
 
 &lt;/html&gt;
 </t>
-<t tx="felix.20210717232712.1" _mod_time="46313737373136333332332e3737380a2e">@language css
+<t tx="felix.20210717232712.1" _mod_time="46313737373432383239322e3434310a2e">@language css
 :root {
   --font-body: "Inter", "Segoe UI", sans-serif;
   --font-heading: "Courier New", Courier, monospace;
@@ -77,7 +77,7 @@ canvas {
   background: #fff;
   z-index: -1;
   pointer-events: none;
-  opacity: 0.25;
+  opacity: 0.3;
 }
 
 body.webgl-ready {
@@ -120,7 +120,7 @@ a:hover {
   border: 2px solid var(--color-border);
   border-radius: var(--radius-xl);
   box-shadow: var(--shadow-soft);
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(7px);
   padding: clamp(2rem, 5vw, 3rem);
   overflow: hidden;
   position: relative;
@@ -160,7 +160,9 @@ a:hover {
   height: clamp(190px, 26vw, 240px);
   border-radius: 50%;
   border: 6px solid rgba(255, 255, 255, 1);
-  box-shadow: 0 18px 40px -22px rgba(31, 12, 60, 0.45);
+  /* box-shadow: 0 18px 40px -22px rgba(31, 12, 60, 0.45); */
+  box-shadow: 0 24px 55px -26px rgba(31, 12, 60, 0); /* invisible shadow for smoother transition */
+
   background-image: url(/felix-160px.jpg);
   background-position: center;
   background-size: cover;
@@ -221,8 +223,8 @@ a:hover {
   color: #68490b;
   transition:
     color 0.3s ease,
-    font-size 0.3s ease;
-  font-size: 1.03rem;
+    text-shadow 0.3s ease;
+  text-shadow: 1px 1px 0px rgba(255, 122, 24, 0.25);
 }
 
 .cta-button {
@@ -247,7 +249,7 @@ a:hover {
 .cta-button.primary {
   background: linear-gradient(135deg, #ff7a18 0%, #ffb347 100%);
   color: #401101;
-  box-shadow: 0 18px 32px -20px rgba(255, 122, 24, 0.55);
+  box-shadow: 0 20px 36px -18px rgba(255, 122, 24, 0.2);
 }
 
 .cta-button.primary img {
@@ -291,9 +293,10 @@ a:hover {
 }
 
 .support-message {
+  text-shadow: 1px 1px 0px rgba(255, 122, 24, 0);
   transition:
     color 0.3s ease,
-    font-size 0.3s ease;
+    text-shadow 0.3s ease;
 }
 
 .support-section:hover .support-message {
@@ -303,7 +306,7 @@ a:hover {
   color: #b65500;
 }
 .support-section:hover .support-message {
-  font-size: 1.02rem;
+  text-shadow: 1px 1px 0px rgba(255, 122, 24, 0.25);
 }
 
 .section-heading h2 {
@@ -332,7 +335,8 @@ a:hover {
   background: rgba(255, 255, 255, 0.75);
   border-radius: var(--radius-lg);
   border: 1px solid rgba(255, 255, 255, 0.6);
-  box-shadow: 0 18px 32px -26px rgba(31, 12, 60, 0.45);
+  /* box-shadow: 0 18px 32px -26px rgba(31, 12, 60, 0.45); */
+  box-shadow: 0 32px 70px -28px rgba(33, 15, 60, 0.15);
   text-decoration: none;
   color: var(--color-text);
   display: flex;
@@ -346,18 +350,6 @@ a:hover {
   overflow: hidden;
 }
 
-.product-card::after {
-  content: "→";
-  position: absolute;
-  right: 24px;
-  bottom: 26px;
-  font-size: 1.4rem;
-  color: rgba(32, 28, 31, 0.25);
-  transition:
-    transform 0.2s ease,
-    color 0.2s ease;
-}
-
 .product-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-hover);
@@ -365,12 +357,7 @@ a:hover {
 }
 
 .product-card:hover .more-info {
-  font-size: 1.05rem;
-}
-
-.product-card:hover::after {
-  transform: translateX(6px);
-  color: var(--color-accent);
+  /* font-size: 1.05rem; */
 }
 
 .product-card h2 {
@@ -423,9 +410,11 @@ a:hover {
 
 .slogan {
   text-align: center;
+  text-shadow: 1px 1px 0px rgba(255, 122, 24, 0);
   transition:
     color 0.3s ease,
-    font-size 0.3s ease;
+    font-size 0.3s ease,
+    text-shadow 0.3s ease;
 }
 
 .leo-32 {
@@ -543,21 +532,21 @@ a:hover {
   background: #6b4234;
 }
 .support-link.github:hover {
-  background: #b37400;
+  background: #eb6904;
 }
 
 .support-link.support {
   background: #7c546d;
 }
 .support-link.support:hover {
-  background: #8d1d55;
+  background: #922467;
 }
 
 .support-link.donate {
-  background: #494e50;
+  background: #415158;
 }
 .support-link.donate:hover {
-  background: #033d9a;
+  background: #90aedf;
 }
 
 .support-link:hover {
@@ -702,12 +691,10 @@ a:hover {
         &lt;div class="hero-buttons"&gt;
           &lt;a class="cta-button primary" title="Watch the Intro to Leo video"
             href="https://www.youtube.com/watch?v=j0eo7SlnnSY" target="_blank" rel="noopener noreferrer"&gt;&lt;img
-              src="/youtube.png" alt="Intro to Leo"&gt; Intro to
-            Leo&lt;/a&gt;
+              src="/youtube.png" alt="Intro to Leo"&gt; Intro to Leo&lt;/a&gt;
           &lt;a class="cta-button primary" title="Watch the LeoJS Features Demo video"
             href="https://www.youtube.com/watch?v=M_mKXSbVGdE" target="_blank" rel="noopener noreferrer"&gt;&lt;img
-              src="/youtube.png" alt="Intro to Leo"&gt; LeoJS
-            Features Demo&lt;/a&gt;
+              src="/youtube.png" alt="Intro to Leo"&gt; LeoJS Demo&lt;/a&gt;
         &lt;/div&gt;
 
         &lt;p class="slogan"&gt;Leo’s outliner and scripting environment, integrated into VS Code and VSCodium.&lt;/p&gt;
