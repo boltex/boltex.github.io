@@ -21,7 +21,7 @@
 
 &lt;/html&gt;
 </t>
-<t tx="felix.20210717232712.1" _mod_time="46313737373432383239322e3434310a2e">@language css
+<t tx="felix.20210717232712.1" _mod_time="46313737383831353833322e3335320a2e">@language css
 :root {
   --font-body: "Inter", "Segoe UI", sans-serif;
   --font-heading: "Courier New", Courier, monospace;
@@ -233,7 +233,7 @@ a:hover {
   gap: 0.4rem;
   padding: 0.75rem 1.35rem;
   border-radius: var(--radius-pill);
-  font-weight: 600;
+  font-weight: 900;
   text-decoration: none;
   letter-spacing: 0.02em;
   transition:
@@ -247,23 +247,22 @@ a:hover {
 }
 
 .cta-button.primary {
-  background: linear-gradient(135deg, #ff7a18 0%, #ffb347 100%);
-  color: #401101;
-  box-shadow: 0 20px 36px -18px rgba(255, 122, 24, 0.2);
+  background: transparent;
+  color: #bd710d;
+  border: 2.5px solid #bd710d;
 }
 
 .cta-button.primary img {
-  filter: grayscale(33%);
+  filter: sepia(40%);
 }
+
 .cta-button.primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 20px 36px -18px rgba(255, 122, 24, 0.6);
-  color: black;
-  filter: brightness(1.18) saturate(1.3);
+  color: white;
+  background: #bd710d;
 }
 
 .cta-button.primary:hover img {
-  filter: grayscale(23%);
+  filter: sepia(100%);
 }
 
 .cta-button.outline {
