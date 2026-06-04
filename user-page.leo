@@ -13,7 +13,7 @@
 <v t="felix.20210717232712.1"><vh>@clean style.css</vh></v>
 </vnodes>
 <tnodes>
-<t tx="felix.20210717232432.2" _mod_time="46313737373432383331392e3039310a2e">@language html
+<t tx="felix.20210717232432.2" _mod_time="46313738303534303235332e3730380a2e">@language html
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 
@@ -21,7 +21,7 @@
 
 &lt;/html&gt;
 </t>
-<t tx="felix.20210717232712.1" _mod_time="46313737383831353833322e3335320a2e">@language css
+<t tx="felix.20210717232712.1" _mod_time="46313738303534303137322e39380a2e">@language css
 :root {
   --font-body: "Inter", "Segoe UI", sans-serif;
   --font-heading: "Courier New", Courier, monospace;
@@ -236,13 +236,6 @@ a:hover {
   font-weight: 900;
   text-decoration: none;
   letter-spacing: 0.02em;
-  transition:
-    transform 0.13s ease,
-    box-shadow 0.18s ease,
-    background 0.18s ease,
-    filter 0.18s ease,
-    color 0.18s ease,
-    border-color 0.18s ease;
   border: 1px solid transparent;
 }
 
@@ -676,7 +669,11 @@ a:hover {
             and
             &lt;a target="_blank" title="Find out more about LeoInteg"
               href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"&gt;LeoInteg&lt;/a&gt;,
-            the Leo Editor extensions for VS Code and VSCodium.
+            the Leo Editor extensions for &lt;a
+              href="https://marketplace.visualstudio.com/search?term=leo%20editor&amp;target=VSCode&amp;category=All%20categories&amp;sortBy=Relevance"
+              target="_blank" rel="noopener noreferrer"&gt;VS Code&lt;/a&gt; and &lt;a
+              href="https://open-vsx.org/?search=Leo%20Editor%20Visual&amp;sortBy=relevance&amp;sortOrder=desc" target="_blank"
+              rel="noopener noreferrer"&gt;VSCodium&lt;/a&gt;.
           &lt;/p&gt;
 
         &lt;/div&gt;
