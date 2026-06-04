@@ -13,7 +13,7 @@
 <v t="felix.20210717232712.1"><vh>@clean style.css</vh></v>
 </vnodes>
 <tnodes>
-<t tx="felix.20210717232432.2" _mod_time="46313738303534303235332e3730380a2e">@language html
+<t tx="felix.20210717232432.2" _mod_time="46313738303539393533312e3939360a2e">@language html
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 
@@ -669,11 +669,9 @@ a:hover {
             and
             &lt;a target="_blank" title="Find out more about LeoInteg"
               href="https://github.com/boltex/leointeg#-leo-for-visual-studio-code"&gt;LeoInteg&lt;/a&gt;,
-            the Leo Editor extensions for &lt;a
-              href="https://marketplace.visualstudio.com/search?term=leo%20editor&amp;target=VSCode&amp;category=All%20categories&amp;sortBy=Relevance"
-              target="_blank" rel="noopener noreferrer"&gt;VS Code&lt;/a&gt; and &lt;a
-              href="https://open-vsx.org/?search=Leo%20Editor%20Visual&amp;sortBy=relevance&amp;sortOrder=desc" target="_blank"
-              rel="noopener noreferrer"&gt;VSCodium&lt;/a&gt;.
+            the Leo Editor extensions for &lt;a href="https://marketplace.visualstudio.com/publishers/boltex"
+              target="_blank" rel="noopener noreferrer"&gt;VS Code&lt;/a&gt; and &lt;a href="https://open-vsx.org/namespace/boltex"
+              target="_blank" rel="noopener noreferrer"&gt;VSCodium&lt;/a&gt;.
           &lt;/p&gt;
 
         &lt;/div&gt;
